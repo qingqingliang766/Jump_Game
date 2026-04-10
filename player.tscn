@@ -11,3 +11,4 @@ script = ExtResource("1_4flbx")
 shape = SubResource("CapsuleShape3D_onrkg")
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=2074657671]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.76930165, 0)
