@@ -30,13 +30,14 @@ script = ExtResource("1_2ccuo")
 environment = SubResource("Environment_v38iq")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=259291443]
-transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
+transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, -14.38147, 4.211563, 14.418213)
 shadow_enabled = true
 
 [node name="Player" parent="." unique_id=1741735744 instance=ExtResource("2_davdf")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7.761983, 10.03001)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.38147, 11.973546, 24.448223)
 
 [node name="Platformer_8_Underworld" parent="." unique_id=667664442 instance=ExtResource("4_qsh25")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.38147, 4.211563, 14.418213)
 
 [node name="DeadZone" type="Area3D" parent="." unique_id=2091972894]
 script = ExtResource("6_178xx")
@@ -45,11 +46,11 @@ script = ExtResource("6_178xx")
 shape = SubResource("BoxShape3D_v8kj3")
 
 [node name="DefaultSpawnPoint" type="Marker3D" parent="DeadZone" unique_id=814880488]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.6963587, 30.025377, 9.065545)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.077827, 34.23694, 23.483757)
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1760290417]
 stream = ExtResource("8_2ccuo")
 volume_db = -18.0
 
 [node name="AnimatableBody3D" parent="." unique_id=1334009841 instance=ExtResource("7_4r7mq")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.29353142, 5.2443366, -29.93409)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.087938, 9.4559, -15.515877)
