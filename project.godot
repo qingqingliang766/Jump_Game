@@ -13,7 +13,7 @@ config_version=5
 config/name="jump_game"
 run/main_scene="uid://ckkpnx4r3shv2"
 config/features=PackedStringArray("4.6", "Forward Plus")
-config/icon="res://asset/icon.svg"
+config/icon="res://Content/asset/icon.svg"
 
 [display]
 
