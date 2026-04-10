@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://weovdeq6bju8" path="res://Content/characters/Player/player.tscn" id="2_davdf"]
 [ext_resource type="PackedScene" uid="uid://bkaaihn7sj4kd" path="res://Content/Maps/Level1/platformer_8_underworld.scn" id="4_qsh25"]
 [ext_resource type="Script" uid="uid://dw4sb7roke11y" path="res://Content/Maps/Level1/dead_zone.gd" id="6_178xx"]
+[ext_resource type="PackedScene" uid="uid://c27pogd3aia3b" path="res://Content/Maps/Level1/Props/RotatingCrossRock.tscn" id="7_4r7mq"]
 [ext_resource type="AudioStream" uid="uid://cowcvwck1juce" path="res://Content/asset/music/Gonzalo Nicolas - Summer.mp3" id="8_2ccuo"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_crycw"]
@@ -49,3 +50,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.6963587, 30.025377, 9.0655
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1760290417]
 stream = ExtResource("8_2ccuo")
 volume_db = -18.0
+
+[node name="AnimatableBody3D" parent="." unique_id=1334009841 instance=ExtResource("7_4r7mq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.29353142, 5.2443366, -29.93409)
