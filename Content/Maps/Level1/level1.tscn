@@ -44,7 +44,7 @@ transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545
 shadow_enabled = true
 
 [node name="Player" parent="." unique_id=1741735744 instance=ExtResource("2_davdf")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -48.72427, -14.500142, 152.83418)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -48.72427, -14.500142, 325.5786)
 
 [node name="Platformer_8_Underworld" parent="." unique_id=667664442 instance=ExtResource("4_qsh25")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -48.782085, -21.56941, 315.86823)
