@@ -11,7 +11,7 @@ func _ready():
 	# 记录初始位置，避免坐标偏移
 	start_y = position.y + start_offset
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	# ✅ Godot 4.6 正确时间API：Time.get_ticks_msec()
 	var time = Time.get_ticks_msec() / 1000.0
 	var new_y = start_y + (move_height / 2) * sin(time * move_speed)
