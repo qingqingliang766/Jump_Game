@@ -4,7 +4,6 @@
 [ext_resource type="Script" uid="uid://dolk04s7k863n" path="res://测试关卡（测试在这里完成）/myq测试文件夹/countdown.gd" id="1_xre66"]
 [ext_resource type="Texture2D" uid="uid://26x6tpw2jrk7" path="res://Content/asset/Platformer_8_Underworld_-_Low_Poly_3D_Models_Pack-c9a2e4b8/glb/source_extracted/Platformer_8_Underworld_Textures1.png" id="2_yksvc"]
 [ext_resource type="Texture2D" uid="uid://b0was83x3jxbp" path="res://Content/asset/Platformer_8_Underworld_-_Low_Poly_3D_Models_Pack-c9a2e4b8/glb/source_extracted/Platformer_8_Underworld_Stone_Normal.jpg" id="3_xre66"]
-[ext_resource type="PackedScene" uid="uid://cr0jr2wmengwa" path="res://测试关卡（测试在这里完成）/myq测试文件夹/321go.tscn" id="5_2pfaw"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_xre66"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -754,9 +753,10 @@ data = PackedVector3Array(-0.2016, 0.1078, -0.48659998, 0, 0.4554, -0.5568, -0.2
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_yiu5v"]
 
+[sub_resource type="BoxMesh" id="BoxMesh_2pfaw"]
+
 [node name="Test" type="Node3D" unique_id=2102015172]
 script = ExtResource("1_xre66")
-metadata/_edit_vertical_guides_ = [287.0]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1032181069]
 environment = SubResource("Environment_yiu5v")
@@ -770,7 +770,7 @@ use_collision = true
 size = Vector3(50, 0.1, 50)
 
 [node name="Player" parent="." unique_id=1741735744 instance=ExtResource("1_huqrv")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.38147, 8.032075, -6.91784)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.38147, 8.032075, -15.283106)
 
 [node name="StartGate" type="StaticBody3D" parent="." unique_id=1914622908]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.38147, -0.20811844, -16.866837)
@@ -1055,4 +1055,29 @@ shape = SubResource("BoxShape3D_yiu5v")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="StartGate" unique_id=339597483]
 
-[node name="Node" parent="." unique_id=1711678380 instance=ExtResource("5_2pfaw")]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StartGate" unique_id=2033489095]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7.38636, 0)
+mesh = SubResource("BoxMesh_2pfaw")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1465006715]
+
+[node name="countdownlabel" type="Label" parent="CanvasLayer" unique_id=1029968196]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 120
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="countdowntimer" type="Timer" parent="." unique_id=2015674255]
