@@ -1,6 +1,5 @@
 [gd_scene format=3 uid="uid://ckkpnx4r3shv2"]
 
-[ext_resource type="Script" uid="uid://h4etyrnkyllf" path="res://Content/Maps/Level1/level_1.gd" id="1_2ccuo"]
 [ext_resource type="Texture2D" uid="uid://byswexmjn8rww" path="res://Content/asset/HDRI/kloofendal_48d_partly_cloudy_puresky_1k.hdr" id="1_nedd6"]
 [ext_resource type="PackedScene" uid="uid://weovdeq6bju8" path="res://Content/characters/Player/player.tscn" id="2_davdf"]
 [ext_resource type="PackedScene" uid="uid://bkaaihn7sj4kd" path="res://Content/Maps/Level1/platformer_8_underworld.scn" id="4_qsh25"]
@@ -10,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://m6mvfunuy3nk" path="res://Content/Core/crosshair.tscn" id="8_7jt2p"]
 [ext_resource type="PackedScene" uid="uid://drtdohhbijyn2" path="res://Content/Core/开始菜单/开始菜单.tscn" id="9_7jt2p"]
 [ext_resource type="PackedScene" uid="uid://bs2ahofs5m0xw" path="res://测试关卡（测试在这里完成）/xzn测试文件夹/皇冠区域.tscn" id="10_vkpin"]
+[ext_resource type="PackedScene" uid="uid://cjugg6g532hrf" path="res://测试关卡（测试在这里完成）/myq测试文件夹/canvas_layer.tscn" id="9_vkpin"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_crycw"]
 panorama = ExtResource("1_nedd6")
@@ -28,7 +28,6 @@ size = Vector3(69.408936, 1, 390.3403)
 
 [node name="level" type="Node3D" unique_id=364165678]
 process_mode = 3
-script = ExtResource("1_2ccuo")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=116063729]
 environment = SubResource("Environment_v38iq")
@@ -38,7 +37,7 @@ transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545
 shadow_enabled = true
 
 [node name="Player" parent="." unique_id=1741735744 instance=ExtResource("2_davdf")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.342387, 12.077154, -198.52689)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -49.86302, -15.925739, 162.34561)
 
 [node name="Platformer_8_Underworld" parent="." unique_id=667664442 instance=ExtResource("4_qsh25")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -48.69013, -21.569408, 316.22357)
@@ -47,6 +46,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -48.69013, -21.569408, 316.22
 script = ExtResource("6_178xx")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="DeadZone" unique_id=144153741]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -54.611687, -53.576714, 0)
 shape = SubResource("BoxShape3D_v8kj3")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1760290417]
@@ -70,7 +70,9 @@ mouse_filter = 2
 visible = false
 
 [node name="DefaultSpawnPoint" type="Marker3D" parent="." unique_id=814880488]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.077827, 34.23694, 23.483757)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -49.165253, -12.442144, 23.483757)
+
+[node name="CanvasLayer2" parent="." unique_id=1052015304 instance=ExtResource("9_vkpin")]
 
 [node name="Area3D" parent="." unique_id=508210702 instance=ExtResource("10_vkpin")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -48.59909, -16.11715, 12.630476)
