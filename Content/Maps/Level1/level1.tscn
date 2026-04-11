@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://ckkpnx4r3shv2"]
 
+[ext_resource type="Script" uid="uid://h4etyrnkyllf" path="res://Content/Maps/Level1/level_1.gd" id="1_2ccuo"]
 [ext_resource type="Texture2D" uid="uid://byswexmjn8rww" path="res://Content/asset/HDRI/kloofendal_48d_partly_cloudy_puresky_1k.hdr" id="1_nedd6"]
 [ext_resource type="PackedScene" uid="uid://weovdeq6bju8" path="res://Content/characters/Player/player.tscn" id="2_davdf"]
 [ext_resource type="PackedScene" uid="uid://bkaaihn7sj4kd" path="res://Content/Maps/Level1/platformer_8_underworld.scn" id="4_qsh25"]
@@ -8,7 +9,7 @@
 [ext_resource type="AudioStream" uid="uid://cowcvwck1juce" path="res://Content/asset/music/Gonzalo Nicolas - Summer.mp3" id="8_2ccuo"]
 [ext_resource type="PackedScene" uid="uid://m6mvfunuy3nk" path="res://Content/Core/crosshair.tscn" id="8_7jt2p"]
 [ext_resource type="PackedScene" uid="uid://drtdohhbijyn2" path="res://Content/Core/开始菜单/开始菜单.tscn" id="9_7jt2p"]
-[ext_resource type="PackedScene" uid="uid://cjugg6g532hrf" path="res://测试关卡（测试在这里完成）/myq测试文件夹/canvas_layer.tscn" id="9_vkpin"]
+[ext_resource type="PackedScene" uid="uid://cr0jr2wmengwa" path="res://测试关卡（测试在这里完成）/myq测试文件夹/321go.tscn" id="10_vkpin"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_crycw"]
 panorama = ExtResource("1_nedd6")
@@ -27,6 +28,7 @@ size = Vector3(69.408936, 1, 390.3403)
 
 [node name="level" type="Node3D" unique_id=364165678]
 process_mode = 3
+script = ExtResource("1_2ccuo")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=116063729]
 environment = SubResource("Environment_v38iq")
@@ -36,7 +38,7 @@ transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545
 shadow_enabled = true
 
 [node name="Player" parent="." unique_id=1741735744 instance=ExtResource("2_davdf")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -49.86302, -15.925739, 162.34561)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -48.72427, -14.500142, 327.3456)
 
 [node name="Platformer_8_Underworld" parent="." unique_id=667664442 instance=ExtResource("4_qsh25")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -48.69013, -21.569408, 316.22357)
@@ -68,9 +70,16 @@ mouse_filter = 2
 [node name="开始菜单" parent="CanvasLayer" unique_id=455735168 instance=ExtResource("9_7jt2p")]
 visible = false
 
+[node name="Node" parent="CanvasLayer" unique_id=414186503 instance=ExtResource("10_vkpin")]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+
 [node name="DefaultSpawnPoint" type="Marker3D" parent="." unique_id=814880488]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -49.165253, -12.442144, 23.483757)
-
-[node name="CanvasLayer2" parent="." unique_id=1052015304 instance=ExtResource("9_vkpin")]
 
 [connection signal="body_entered" from="DeadZone" to="DeadZone" method="_on_body_entered"]
