@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://da206ibbbl0b2"]
+
+[ext_resource type="PackedScene" uid="uid://u7xki5pfoafi" path="res://Content/asset/Platformer_8_Underworld_-_Low_Poly_3D_Models_Pack-c9a2e4b8/glb/source_extracted/Separate_assets_glb_extracted/Separate_assets_glb/wall_001.glb" id="1_1rrt5"]
+
+[node name="wall_0012" unique_id=1483188583 instance=ExtResource("1_1rrt5")]

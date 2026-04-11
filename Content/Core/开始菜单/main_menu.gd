@@ -13,12 +13,19 @@ func _ready() -> void:
 
 # “开始游戏”按钮的逻辑
 func _on_play_button_pressed() -> void:
-	if start_level_path == "":
-		print("错误：你还没设置开始关卡的路径！")
-		return
-	
-	# 跳转场景
-	get_tree().change_scene_to_file(start_level_path)
+	# 先检查游戏是否处于暂停状态
+	if get_tree().paused:
+		# 如果是暂停，我们只需要“恢复”
+		get_tree().paused = false
+		self.hide() # 隐藏菜单
+		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED) # 重新锁住鼠标
+		print("恢复游戏运行")
+	else:
+		# 如果没暂停（比如刚启动），才执行跳转场景
+		if start_level_path == "":
+			print("错误：路径为空")
+			return
+		get_tree().change_scene_to_file(start_level_path)
 
 # “退出游戏”按钮的逻辑
 func _on_exit_button_pressed() -> void:

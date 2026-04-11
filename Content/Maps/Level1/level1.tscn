@@ -10,9 +10,12 @@
 [ext_resource type="PackedScene" uid="uid://m6mvfunuy3nk" path="res://Content/Core/crosshair.tscn" id="8_7jt2p"]
 [ext_resource type="PackedScene" uid="uid://drtdohhbijyn2" path="res://Content/Core/开始菜单/开始菜单.tscn" id="9_7jt2p"]
 [ext_resource type="PackedScene" uid="uid://cjugg6g532hrf" path="res://测试关卡（测试在这里完成）/myq测试文件夹/canvas_layer.tscn" id="9_vkpin"]
-[ext_resource type="PackedScene" path="res://测试关卡（测试在这里完成）/xzn测试文件夹/皇冠区域.tscn" id="10_vkpin"]
+[ext_resource type="PackedScene" uid="uid://bs2ahofs5m0xw" path="res://测试关卡（测试在这里完成）/xzn测试文件夹/皇冠区域.tscn" id="10_vkpin"]
 [ext_resource type="PackedScene" uid="uid://cr0jr2wmengwa" path="res://测试关卡（测试在这里完成）/myq测试文件夹/321go.tscn" id="12_jjg00"]
-[ext_resource type="PackedScene" uid="uid://u7xki5pfoafi" path="res://Content/asset/Platformer_8_Underworld_-_Low_Poly_3D_Models_Pack-c9a2e4b8/glb/source_extracted/Separate_assets_glb_extracted/Separate_assets_glb/wall_001.glb" id="13_l0o06"]
+[ext_resource type="PackedScene" path="res://测试关卡（测试在这里完成）/xbb测试文件夹/static_body_123.tscn" id="13_l0o06"]
+[ext_resource type="PackedScene" path="res://测试关卡（测试在这里完成）/xbb测试文件夹/static_body_441.tscn" id="14_ggyc6"]
+[ext_resource type="PackedScene" path="res://测试关卡（测试在这里完成）/xbb测试文件夹/static_body_1133.tscn" id="15_iojm8"]
+[ext_resource type="PackedScene" uid="uid://u7xki5pfoafi" path="res://Content/asset/Platformer_8_Underworld_-_Low_Poly_3D_Models_Pack-c9a2e4b8/glb/source_extracted/Separate_assets_glb_extracted/Separate_assets_glb/wall_001.glb" id="16_w2cyy"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_crycw"]
 panorama = ExtResource("1_nedd6")
@@ -27,7 +30,7 @@ tonemap_mode = 2
 glow_enabled = true
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_v8kj3"]
-size = Vector3(69.408936, 1, 390.3403)
+size = Vector3(474.65448, 1, 692.307)
 
 [node name="level" type="Node3D" unique_id=364165678]
 process_mode = 3
@@ -44,13 +47,14 @@ shadow_enabled = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -48.72427, -14.500142, 327.3456)
 
 [node name="Platformer_8_Underworld" parent="." unique_id=667664442 instance=ExtResource("4_qsh25")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -48.69013, -21.569408, 316.22357)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -48.782085, -21.56941, 315.86823)
 
 [node name="DeadZone" type="Area3D" parent="." unique_id=2091972894]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.4167175, 0, 0)
 script = ExtResource("6_178xx")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="DeadZone" unique_id=144153741]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -54.611687, -53.576714, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -77.59811, -53.576714, 150.98334)
 shape = SubResource("BoxShape3D_v8kj3")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1760290417]
@@ -92,15 +96,30 @@ anchor_bottom = 0.5
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="door" type="Node" parent="." unique_id=151325273]
+[node name="StaticBody3D" parent="." unique_id=1160286444 instance=ExtResource("13_l0o06")]
+transform = Transform3D(0.99999654, -0.0026005656, 0, 0.0026005656, 0.99999654, 0, 0, 0, 1, -52.01385, -16.665348, 58.897015)
 
-[node name="wall_0014" parent="door" unique_id=1483188583 instance=ExtResource("13_l0o06")]
-transform = Transform3D(1.4, 0, 0, 0, 1.4, 0, 0, 0, 1.4, -48.69674, -16.591284, 318.76285)
+[node name="StaticBody3D2" parent="." unique_id=1489580715 instance=ExtResource("13_l0o06")]
+transform = Transform3D(0.99999654, -0.0026005656, 0, 0.0026005656, 0.99999654, 0, 0, 0, 1, -47.55818, -16.790363, 63.481026)
 
-[node name="wall_0012" parent="door" unique_id=422983992 instance=ExtResource("13_l0o06")]
-transform = Transform3D(1.4, 0, 0, 0, 1.4, 0, 0, 0, 1.4, -48.69674, -16.591284, 311.68893)
+[node name="StaticBody3D3" parent="." unique_id=1826172453 instance=ExtResource("14_ggyc6")]
+transform = Transform3D(0.8744963, 0.016806737, 0.48474124, -0.014699502, 0.99985886, -0.0081480695, -0.48480964, 1.8126389e-09, 0.87461984, -46.97894, -16.53023, 41.741615)
 
-[node name="wall_0013" parent="door" unique_id=1598060582 instance=ExtResource("13_l0o06")]
-transform = Transform3D(1.4, 0, 0, 0, 1.4, 0, 0, 0, 1.4, -48.69674, -16.591284, 302.5884)
+[node name="StaticBody3D4" parent="." unique_id=1699106780 instance=ExtResource("14_ggyc6")]
+transform = Transform3D(0.8744963, 0.016806737, 0.48474124, -0.014699502, 0.99985886, -0.0081480695, -0.48480964, 1.8126389e-09, 0.87461984, -51.649963, -16.53023, 46.05913)
+
+[node name="StaticBody3D5" parent="." unique_id=1889521859 instance=ExtResource("15_iojm8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -48.514145, -12.263201, 51.93538)
+
+[node name="door" type="Node" parent="." unique_id=1694834364]
+
+[node name="wall_0014" parent="door" unique_id=1483188583 instance=ExtResource("16_w2cyy")]
+transform = Transform3D(1.4, 0, 0, 0, 1.4, 0, 0, 0, 1.4, -48.707447, -16.77953, 318.33414)
+
+[node name="wall_0012" parent="door" unique_id=471240175 instance=ExtResource("16_w2cyy")]
+transform = Transform3D(1.4, 0, 0, 0, 1.4, 0, 0, 0, 1.4, -48.707447, -16.77953, 311.68912)
+
+[node name="wall_0013" parent="door" unique_id=1673209938 instance=ExtResource("16_w2cyy")]
+transform = Transform3D(1.4, 0, 0, 0, 1.4, 0, 0, 0, 1.4, -48.707447, -16.77953, 302.1367)
 
 [connection signal="body_entered" from="DeadZone" to="DeadZone" method="_on_body_entered"]

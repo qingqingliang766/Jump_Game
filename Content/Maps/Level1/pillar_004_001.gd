@@ -1,18 +1,31 @@
 extends Node3D
 
-# ✅ 高度大幅提升，速度保持不变（直接用）
-@export var move_speed: float = 0.6   # 保持原慢速度，不影响跳跃
-@export var move_height: float = 2.8  # 上下幅度大幅拉高，比之前更高
+# 你原来的代码 一丝不动
+@export var move_speed: float = 0.6
+@export var move_height: float = 2.8
 @export var start_offset: float = 0.0
 
+# 仅加这一行：触碰音效
+@export var hit_sound: AudioStream
+
 var start_y: float
+var audio: AudioStreamPlayer3D
 
 func _ready():
-	# 记录初始位置，避免坐标偏移
 	start_y = position.y + start_offset
+	# 自动创建音效播放器（不用手动加节点）
+	audio = AudioStreamPlayer3D.new()
+	add_child(audio)
 
+@warning_ignore("unused_parameter")
 func _process(delta: float) -> void:
-	# ✅ 完全兼容Godot 4.6.2，无报错、丝滑不卡顿
+	# 你原来的运动代码 完全不变
 	var time = Time.get_ticks_msec() / 1000.0
 	var new_y = start_y + (move_height / 2) * sin(time * move_speed)
 	position.y = new_y
+
+# 触碰播放声音（手动调用，不依赖节点类型）
+func play_hit_sound():
+	if hit_sound:
+		audio.stream = hit_sound
+		audio.play()
