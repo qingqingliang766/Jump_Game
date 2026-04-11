@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://cjugg6g532hrf" path="res://测试关卡（测试在这里完成）/myq测试文件夹/canvas_layer.tscn" id="9_vkpin"]
 [ext_resource type="PackedScene" path="res://测试关卡（测试在这里完成）/xzn测试文件夹/皇冠区域.tscn" id="10_vkpin"]
 [ext_resource type="PackedScene" uid="uid://cr0jr2wmengwa" path="res://测试关卡（测试在这里完成）/myq测试文件夹/321go.tscn" id="12_jjg00"]
+[ext_resource type="PackedScene" uid="uid://u7xki5pfoafi" path="res://Content/asset/Platformer_8_Underworld_-_Low_Poly_3D_Models_Pack-c9a2e4b8/glb/source_extracted/Separate_assets_glb_extracted/Separate_assets_glb/wall_001.glb" id="13_l0o06"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_crycw"]
 panorama = ExtResource("1_nedd6")
@@ -90,5 +91,16 @@ anchor_right = 0.5
 anchor_bottom = 0.5
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="door" type="Node" parent="." unique_id=151325273]
+
+[node name="wall_0014" parent="door" unique_id=1483188583 instance=ExtResource("13_l0o06")]
+transform = Transform3D(1.4, 0, 0, 0, 1.4, 0, 0, 0, 1.4, -48.69674, -16.591284, 318.76285)
+
+[node name="wall_0012" parent="door" unique_id=422983992 instance=ExtResource("13_l0o06")]
+transform = Transform3D(1.4, 0, 0, 0, 1.4, 0, 0, 0, 1.4, -48.69674, -16.591284, 311.68893)
+
+[node name="wall_0013" parent="door" unique_id=1598060582 instance=ExtResource("13_l0o06")]
+transform = Transform3D(1.4, 0, 0, 0, 1.4, 0, 0, 0, 1.4, -48.69674, -16.591284, 302.5884)
 
 [connection signal="body_entered" from="DeadZone" to="DeadZone" method="_on_body_entered"]
