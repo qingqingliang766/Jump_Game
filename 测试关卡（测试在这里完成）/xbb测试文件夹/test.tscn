@@ -1,6 +1,45 @@
 [gd_scene format=3 uid="uid://dlrlqhs4tql0i"]
 
+[ext_resource type="PackedScene" uid="uid://c1mdm12hhaqyc" path="res://测试关卡（测试在这里完成）/xbb测试文件夹/static_body_123.tscn" id="2_ybut8"]
+[ext_resource type="PackedScene" uid="uid://bvdq73u4kthl1" path="res://测试关卡（测试在这里完成）/xbb测试文件夹/static_body_441.tscn" id="3_qaj4a"]
+[ext_resource type="PackedScene" uid="uid://cwk2fj7k4ltot" path="res://测试关卡（测试在这里完成）/xbb测试文件夹/static_body_1133.tscn" id="4_47ojr"]
+[ext_resource type="PackedScene" uid="uid://weovdeq6bju8" path="res://Content/characters/Player/player.tscn" id="4_lkqa3"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_lkqa3"]
+sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+
+[sub_resource type="Sky" id="Sky_47ojr"]
+sky_material = SubResource("ProceduralSkyMaterial_lkqa3")
+
+[sub_resource type="Environment" id="Environment_rxtl4"]
+background_mode = 2
+sky = SubResource("Sky_47ojr")
+tonemap_mode = 2
+glow_enabled = true
+
 [node name="Test" type="Node3D" unique_id=2102015172]
 
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1898594291]
+environment = SubResource("Environment_rxtl4")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=160274797]
+transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
+shadow_enabled = true
+
 [node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=1917468951]
-size = Vector3(50, 0.1, 50)
+transform = Transform3D(1, -3.2374842e-06, -1.3300814e-05, 3.2374842e-06, 1, 1.0827024e-05, 1.3300814e-05, -1.0827024e-05, 1, -2.162407, 6.963439, 2.4184666)
+use_collision = true
+size = Vector3(50, 3.4383302, 50)
+
+[node name="Player" parent="." unique_id=1741735744 instance=ExtResource("4_lkqa3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.632617, 12.228191, -0.12853265)
+
+[node name="StaticBody3D" parent="." unique_id=1160286444 instance=ExtResource("2_ybut8")]
+transform = Transform3D(0.9999965, -0.0026005653, 0, 0.0026005653, 0.9999965, 0, 0, 0, 1, 0, 10.505, 0)
+
+[node name="StaticBody3D2" parent="." unique_id=1826172453 instance=ExtResource("3_qaj4a")]
+transform = Transform3D(0.8746197, 0, 0.4848096, 0, 1, 0, -0.4848096, 0, 0.8746197, 0, 8.631, -12.512)
+
+[node name="StaticBody3D3" parent="." unique_id=1889521859 instance=ExtResource("4_47ojr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 12, -20)
