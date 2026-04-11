@@ -13,6 +13,8 @@
 [ext_resource type="PackedScene" uid="uid://bs2ahofs5m0xw" path="res://测试关卡（测试在这里完成）/xzn测试文件夹/皇冠区域.tscn" id="10_vkpin"]
 [ext_resource type="PackedScene" uid="uid://cr0jr2wmengwa" path="res://测试关卡（测试在这里完成）/myq测试文件夹/321go.tscn" id="12_jjg00"]
 [ext_resource type="PackedScene" uid="uid://c1mdm12hhaqyc" path="res://测试关卡（测试在这里完成）/xbb测试文件夹/static_body_123.tscn" id="13_l0o06"]
+[ext_resource type="PackedScene" uid="uid://bvdq73u4kthl1" path="res://测试关卡（测试在这里完成）/xbb测试文件夹/static_body_441.tscn" id="14_ggyc6"]
+[ext_resource type="PackedScene" uid="uid://cwk2fj7k4ltot" path="res://测试关卡（测试在这里完成）/xbb测试文件夹/static_body_1133.tscn" id="15_iojm8"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_crycw"]
 panorama = ExtResource("1_nedd6")
@@ -94,6 +96,18 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="StaticBody3D" parent="." unique_id=1160286444 instance=ExtResource("13_l0o06")]
-transform = Transform3D(0.99999654, -0.0026005656, 0, 0.0026005656, 0.99999654, 0, 0, 0, 1, -49.166664, -16.426708, 50.558144)
+transform = Transform3D(0.99999654, -0.0026005656, 0, 0.0026005656, 0.99999654, 0, 0, 0, 1, -52.01385, -16.665348, 58.897015)
+
+[node name="StaticBody3D2" parent="." unique_id=1489580715 instance=ExtResource("13_l0o06")]
+transform = Transform3D(0.99999654, -0.0026005656, 0, 0.0026005656, 0.99999654, 0, 0, 0, 1, -47.55818, -16.790363, 63.481026)
+
+[node name="StaticBody3D3" parent="." unique_id=1826172453 instance=ExtResource("14_ggyc6")]
+transform = Transform3D(0.8744963, 0.016806737, 0.48474124, -0.014699502, 0.99985886, -0.0081480695, -0.48480964, 1.8126389e-09, 0.87461984, -46.97894, -16.53023, 41.741615)
+
+[node name="StaticBody3D4" parent="." unique_id=1699106780 instance=ExtResource("14_ggyc6")]
+transform = Transform3D(0.8744963, 0.016806737, 0.48474124, -0.014699502, 0.99985886, -0.0081480695, -0.48480964, 1.8126389e-09, 0.87461984, -51.649963, -16.53023, 46.05913)
+
+[node name="StaticBody3D5" parent="." unique_id=1889521859 instance=ExtResource("15_iojm8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -48.514145, -12.263201, 51.93538)
 
 [connection signal="body_entered" from="DeadZone" to="DeadZone" method="_on_body_entered"]
