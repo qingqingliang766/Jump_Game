@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://drtdohhbijyn2"]
 
 [ext_resource type="Script" uid="uid://cbqdfdfg7be7e" path="res://Content/Core/开始菜单/main_menu.gd" id="1_4knqn"]
+[ext_resource type="Texture2D" uid="uid://cjdx7v1owyy7g" path="res://Content/Core/开始菜单/OIP-C.jpg" id="2_m14pg"]
 
 [node name="开始菜单" type="Control" unique_id=455735168]
 process_mode = 3
@@ -14,24 +15,28 @@ mouse_filter = 2
 script = ExtResource("1_4knqn")
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=937277483]
+clip_contents = true
 layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -36.0
-offset_top = -33.0
-offset_right = 36.0
-offset_bottom = 33.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=1328911704]
+[node name="Background" type="TextureRect" parent="MarginContainer" unique_id=39073990]
+clip_contents = true
 layout_mode = 2
-size_flags_vertical = 4
+texture = ExtResource("2_m14pg")
+stretch_mode = 6
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=1328911704]
+clip_contents = true
+layout_mode = 2
+size_flags_vertical = 8
+size_flags_stretch_ratio = 5.06
 
 [node name="Play_Button" type="Button" parent="MarginContainer/VBoxContainer" unique_id=301182718]
+clip_contents = true
 layout_mode = 2
 text = "开始游戏"
 
