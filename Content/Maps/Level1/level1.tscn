@@ -33,14 +33,14 @@ script = ExtResource("1_2ccuo")
 environment = SubResource("Environment_v38iq")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=259291443]
-transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, -14.38147, 4.211563, 14.418213)
+transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, -45.93477, 2.9284935, 108.92136)
 shadow_enabled = true
 
 [node name="Player" parent="." unique_id=1741735744 instance=ExtResource("2_davdf")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.38147, 11.973546, -99.2578)
 
 [node name="Platformer_8_Underworld" parent="." unique_id=667664442 instance=ExtResource("4_qsh25")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.38147, 4.211563, 14.418213)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -48.69013, -21.569408, 316.22357)
 
 [node name="DeadZone" type="Area3D" parent="." unique_id=2091972894]
 script = ExtResource("6_178xx")
