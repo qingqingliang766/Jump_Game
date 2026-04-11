@@ -3,7 +3,8 @@ extends Area3D
 @onready var success_label = $UILayer/SuccessLabel
 
 func _ready():
-	body_entered.connect(_on_body_entered)
+	#body_entered.connect(_on_body_entered)
+	pass
 
 func _on_body_entered(body):
 	if body.name == "Player":
