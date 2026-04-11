@@ -1,6 +1,6 @@
 extends Area3D
 
-@onready var default_spawn_point: Marker3D = $DefaultSpawnPoint
+@onready var default_spawn_point: Marker3D = $"../DefaultSpawnPoint"
 
 func _on_body_entered(body: Node3D) -> void:
 	# 只要进来的东西是 CharacterBody3D 类型（也就是你的玩家）
