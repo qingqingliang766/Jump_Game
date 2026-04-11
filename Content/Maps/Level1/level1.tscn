@@ -9,6 +9,7 @@
 [ext_resource type="AudioStream" uid="uid://cowcvwck1juce" path="res://Content/asset/music/Gonzalo Nicolas - Summer.mp3" id="8_2ccuo"]
 [ext_resource type="PackedScene" uid="uid://m6mvfunuy3nk" path="res://Content/Core/crosshair.tscn" id="8_7jt2p"]
 [ext_resource type="PackedScene" uid="uid://drtdohhbijyn2" path="res://Content/Core/开始菜单/开始菜单.tscn" id="9_7jt2p"]
+[ext_resource type="PackedScene" uid="uid://bs2ahofs5m0xw" path="res://测试关卡（测试在这里完成）/xzn测试文件夹/皇冠区域.tscn" id="10_vkpin"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_crycw"]
 panorama = ExtResource("1_nedd6")
@@ -33,22 +34,14 @@ script = ExtResource("1_2ccuo")
 environment = SubResource("Environment_v38iq")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=259291443]
-<<<<<<< HEAD
 transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, -45.93477, 2.9284935, 108.92136)
-=======
-transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, -14.38147, 4.211563, 14.418213)
->>>>>>> d79c65fdea77c51b648c6df13e820427be875e85
 shadow_enabled = true
 
 [node name="Player" parent="." unique_id=1741735744 instance=ExtResource("2_davdf")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.342387, 12.077154, -198.52689)
 
 [node name="Platformer_8_Underworld" parent="." unique_id=667664442 instance=ExtResource("4_qsh25")]
-<<<<<<< HEAD
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -48.69013, -21.569408, 316.22357)
-=======
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.38147, 4.211563, 14.418213)
->>>>>>> d79c65fdea77c51b648c6df13e820427be875e85
 
 [node name="DeadZone" type="Area3D" parent="." unique_id=2091972894]
 script = ExtResource("6_178xx")
@@ -78,5 +71,8 @@ visible = false
 
 [node name="DefaultSpawnPoint" type="Marker3D" parent="." unique_id=814880488]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.077827, 34.23694, 23.483757)
+
+[node name="Area3D" parent="." unique_id=508210702 instance=ExtResource("10_vkpin")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -48.59909, -16.11715, 12.630476)
 
 [connection signal="body_entered" from="DeadZone" to="DeadZone" method="_on_body_entered"]
