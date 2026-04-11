@@ -1,42 +1,35 @@
 extends Area3D
 
-# 定义成功标签的引用（你可以在编辑器中拖拽赋值）
 @onready var success_label = $UILayer/SuccessLabel
 
-# 当游戏开始时执行
 func _ready():
-	# 连接身体进入信号（检测玩家接触）
 	body_entered.connect(_on_body_entered)
-	# 也可以用 area_entered（如果玩家是 Area3D）
-	# area_entered.connect(_on_area_entered)
 
-# 检测到有身体（如CharacterBody3D）进入皇冠区域时触发
 func _on_body_entered(body):
-	# 这里可以判断是不是玩家（比如给玩家节点命名为Player）
 	if body.name == "Player":
 		pick_crown()
 
-# 检测到有区域（Area3D）进入皇冠区域时触发（备选）
-func _on_area_entered(area):
-	if area.name == "Player":
-		pick_crown()
-
-# 核心拾取逻辑
 func pick_crown():
-	# 1. 让皇冠消失
-	self.visible = false  # 隐藏整个皇冠节点
-	# 如果只想隐藏模型，可以用：$MeshInstance3D.visible = false
-	
-	# 2. 禁用碰撞（防止重复拾取）
+	# 1. 隐藏皇冠，禁用碰撞（防止重复拾取）
+	visible = false
 	monitoring = false
 	collision_layer = 0
-	
+
+	# 2. 播放成功音效（绝对稳定写法）
+	# 👇 仅需修改这里的路径！右键音频文件→复制路径，直接粘贴
+	var audio_path = "res://测试关卡（测试在这里完成）/xzn测试文件夹/胜利音效：管弦乐下降-正确答案-游戏_爱给网_aigei_com.mp3"
+	var sound = load(audio_path)
+	if sound:
+		var audio = AudioStreamPlayer.new()
+		add_child(audio)
+		audio.stream = sound
+		audio.play()
+		print("✅ 音效播放成功！")
+	else:
+		print("❌ 加载音频失败，请检查路径：", audio_path)
+
 	# 3. 显示成功标签
 	if success_label:
 		success_label.visible = true
-		# 可选：3秒后自动隐藏标签
 		await get_tree().create_timer(3.0).timeout
 		success_label.visible = false
-	
-	# 可选：播放拾取音效/粒子效果
-	# $AudioStreamPlayer.play()
