@@ -7,6 +7,8 @@
 [ext_resource type="Script" uid="uid://dw4sb7roke11y" path="res://Content/Maps/Level1/dead_zone.gd" id="6_178xx"]
 [ext_resource type="PackedScene" uid="uid://c27pogd3aia3b" path="res://Content/Maps/Level1/Props/RotatingCrossRock.tscn" id="7_4r7mq"]
 [ext_resource type="AudioStream" uid="uid://cowcvwck1juce" path="res://Content/asset/music/Gonzalo Nicolas - Summer.mp3" id="8_2ccuo"]
+[ext_resource type="PackedScene" uid="uid://m6mvfunuy3nk" path="res://Content/Core/crosshair.tscn" id="8_7jt2p"]
+[ext_resource type="PackedScene" uid="uid://drtdohhbijyn2" path="res://Content/Core/开始菜单/开始菜单.tscn" id="9_7jt2p"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_crycw"]
 panorama = ExtResource("1_nedd6")
@@ -24,19 +26,25 @@ glow_enabled = true
 size = Vector3(69.408936, 1, 390.3403)
 
 [node name="level" type="Node3D" unique_id=364165678]
+process_mode = 3
 script = ExtResource("1_2ccuo")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=116063729]
 environment = SubResource("Environment_v38iq")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=259291443]
-transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
+transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, -14.38147, 4.211563, 14.418213)
 shadow_enabled = true
 
 [node name="Player" parent="." unique_id=1741735744 instance=ExtResource("2_davdf")]
+<<<<<<< HEAD
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7.761983, -198.52689)
+=======
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.38147, 11.973546, -129.54709)
+>>>>>>> 7a105a9485ca07340502d5ffce738d2e2d9fbfdd
 
 [node name="Platformer_8_Underworld" parent="." unique_id=667664442 instance=ExtResource("4_qsh25")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.38147, 4.211563, 14.418213)
 
 [node name="DeadZone" type="Area3D" parent="." unique_id=2091972894]
 script = ExtResource("6_178xx")
@@ -44,12 +52,27 @@ script = ExtResource("6_178xx")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="DeadZone" unique_id=144153741]
 shape = SubResource("BoxShape3D_v8kj3")
 
-[node name="DefaultSpawnPoint" type="Marker3D" parent="DeadZone" unique_id=814880488]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.6963587, 30.025377, 9.065545)
-
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1760290417]
 stream = ExtResource("8_2ccuo")
 volume_db = -18.0
 
-[node name="AnimatableBody3D" parent="." unique_id=1334009841 instance=ExtResource("7_4r7mq")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.29353142, 5.2443366, -29.93409)
+[node name="旋转石柱" parent="." unique_id=1334009841 instance=ExtResource("7_4r7mq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.087938, 9.4559, -15.515877)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=426322470]
+
+[node name="Crosshair" parent="CanvasLayer" unique_id=20876459 instance=ExtResource("8_7jt2p")]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+mouse_filter = 2
+
+[node name="开始菜单" parent="CanvasLayer" unique_id=455735168 instance=ExtResource("9_7jt2p")]
+visible = false
+
+[node name="DefaultSpawnPoint" type="Marker3D" parent="." unique_id=814880488]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.077827, 34.23694, 23.483757)
+
+[connection signal="body_entered" from="DeadZone" to="DeadZone" method="_on_body_entered"]

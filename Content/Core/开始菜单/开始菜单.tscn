@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://drtdohhbijyn2"]
+
+[ext_resource type="Script" uid="uid://cbqdfdfg7be7e" path="res://Content/Core/开始菜单/main_menu.gd" id="1_4knqn"]
+
+[node name="开始菜单" type="Control" unique_id=455735168]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_4knqn")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=937277483]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -36.0
+offset_top = -33.0
+offset_right = 36.0
+offset_bottom = 33.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=1328911704]
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="Play_Button" type="Button" parent="MarginContainer/VBoxContainer" unique_id=301182718]
+layout_mode = 2
+text = "开始游戏"
+
+[node name="Exit_Button" type="Button" parent="MarginContainer/VBoxContainer" unique_id=1889097907]
+layout_mode = 2
+text = "退出游戏"
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Play_Button" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Exit_Button" to="." method="_on_exit_button_pressed"]
