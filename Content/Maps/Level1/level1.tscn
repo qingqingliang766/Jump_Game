@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://c27pogd3aia3b" path="res://Content/Maps/Level1/Props/RotatingCrossRock.tscn" id="7_4r7mq"]
 [ext_resource type="AudioStream" uid="uid://cowcvwck1juce" path="res://Content/asset/music/Gonzalo Nicolas - Summer.mp3" id="8_2ccuo"]
 [ext_resource type="PackedScene" uid="uid://m6mvfunuy3nk" path="res://Content/Core/crosshair.tscn" id="8_7jt2p"]
+[ext_resource type="PackedScene" uid="uid://drtdohhbijyn2" path="res://Content/Core/开始菜单/开始菜单.tscn" id="9_7jt2p"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_crycw"]
 panorama = ExtResource("1_nedd6")
@@ -25,6 +26,7 @@ glow_enabled = true
 size = Vector3(69.408936, 1, 390.3403)
 
 [node name="level" type="Node3D" unique_id=364165678]
+process_mode = 3
 script = ExtResource("1_2ccuo")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=116063729]
@@ -50,7 +52,7 @@ shape = SubResource("BoxShape3D_v8kj3")
 stream = ExtResource("8_2ccuo")
 volume_db = -18.0
 
-[node name="AnimatableBody3D" parent="." unique_id=1334009841 instance=ExtResource("7_4r7mq")]
+[node name="旋转石柱" parent="." unique_id=1334009841 instance=ExtResource("7_4r7mq")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.087938, 9.4559, -15.515877)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=426322470]
@@ -62,6 +64,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 mouse_filter = 2
+
+[node name="开始菜单" parent="CanvasLayer" unique_id=455735168 instance=ExtResource("9_7jt2p")]
+visible = false
 
 [node name="DefaultSpawnPoint" type="Marker3D" parent="." unique_id=814880488]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.077827, 34.23694, 23.483757)
