@@ -12,9 +12,9 @@
 [ext_resource type="PackedScene" uid="uid://cjugg6g532hrf" path="res://测试关卡（测试在这里完成）/myq测试文件夹/canvas_layer.tscn" id="9_vkpin"]
 [ext_resource type="PackedScene" uid="uid://bs2ahofs5m0xw" path="res://测试关卡（测试在这里完成）/xzn测试文件夹/皇冠区域.tscn" id="10_vkpin"]
 [ext_resource type="PackedScene" uid="uid://cr0jr2wmengwa" path="res://测试关卡（测试在这里完成）/myq测试文件夹/321go.tscn" id="12_jjg00"]
-[ext_resource type="PackedScene" path="res://测试关卡（测试在这里完成）/xbb测试文件夹/static_body_123.tscn" id="13_l0o06"]
-[ext_resource type="PackedScene" path="res://测试关卡（测试在这里完成）/xbb测试文件夹/static_body_441.tscn" id="14_ggyc6"]
-[ext_resource type="PackedScene" path="res://测试关卡（测试在这里完成）/xbb测试文件夹/static_body_1133.tscn" id="15_iojm8"]
+[ext_resource type="PackedScene" uid="uid://c1mdm12hhaqyc" path="res://测试关卡（测试在这里完成）/xbb测试文件夹/static_body_123.tscn" id="13_l0o06"]
+[ext_resource type="PackedScene" uid="uid://bvdq73u4kthl1" path="res://测试关卡（测试在这里完成）/xbb测试文件夹/static_body_441.tscn" id="14_ggyc6"]
+[ext_resource type="PackedScene" uid="uid://cwk2fj7k4ltot" path="res://测试关卡（测试在这里完成）/xbb测试文件夹/static_body_1133.tscn" id="15_iojm8"]
 [ext_resource type="PackedScene" uid="uid://u7xki5pfoafi" path="res://Content/asset/Platformer_8_Underworld_-_Low_Poly_3D_Models_Pack-c9a2e4b8/glb/source_extracted/Separate_assets_glb_extracted/Separate_assets_glb/wall_001.glb" id="16_w2cyy"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_crycw"]
@@ -44,7 +44,7 @@ transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545
 shadow_enabled = true
 
 [node name="Player" parent="." unique_id=1741735744 instance=ExtResource("2_davdf")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -48.72427, -14.500142, 327.3456)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -48.72427, -14.500142, 152.83418)
 
 [node name="Platformer_8_Underworld" parent="." unique_id=667664442 instance=ExtResource("4_qsh25")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -48.782085, -21.56941, 315.86823)

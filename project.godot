@@ -17,6 +17,8 @@ config/icon="res://Content/asset/icon.svg"
 
 [display]
 
+window/size/viewport_width=1600
+window/size/viewport_height=900
 window/stretch/mode="viewport"
 window/stretch/aspect="expand"
 
@@ -66,6 +68,4 @@ esc={
 
 [rendering]
 
-renderer/rendering_method="gl_compatibility"
-renderer/rendering_method.mobile="gl_compatibility"
 renderer/rendering_driver="opengl3"
