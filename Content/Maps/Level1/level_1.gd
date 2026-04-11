@@ -28,3 +28,7 @@ func toggle_pause():
 	else:
 		pause_menu.hide()
 		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED) # 重新锁死鼠标
+
+
+func _on_dead_zone_body_entered(body: Node3D) -> void:
+	pass # Replace with function body.

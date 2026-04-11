@@ -23,8 +23,8 @@ func _ready():
 	
 	# ✅ 自动连接Area3D信号（不用手动找节点，脚本会自动查找）
 	# 因为你已经把CollisionShape3D放在了Area3D->hit_area下面，所以能直接连
-	if $hit_area:
-		$hit_area.body_entered.connect(_on_body_entered)
+	#if $hit_area:
+		#$hit_area.body_entered.connect(_on_body_entered)
 
 func _process(delta: float) -> void:
 	# ✅ 你原来的运动代码（完全不变）

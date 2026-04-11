@@ -15,7 +15,7 @@
 [ext_resource type="PackedScene" uid="uid://cwk2fj7k4ltot" path="res://测试关卡（测试在这里完成）/xbb测试文件夹/static_body_1133.tscn" id="12_jjg00"]
 =======
 [ext_resource type="PackedScene" uid="uid://cjugg6g532hrf" path="res://测试关卡（测试在这里完成）/myq测试文件夹/canvas_layer.tscn" id="9_vkpin"]
-[ext_resource type="PackedScene" path="res://测试关卡（测试在这里完成）/xzn测试文件夹/皇冠区域.tscn" id="10_vkpin"]
+[ext_resource type="PackedScene" uid="uid://bs2ahofs5m0xw" path="res://测试关卡（测试在这里完成）/xzn测试文件夹/皇冠区域.tscn" id="10_vkpin"]
 [ext_resource type="PackedScene" uid="uid://cr0jr2wmengwa" path="res://测试关卡（测试在这里完成）/myq测试文件夹/321go.tscn" id="12_jjg00"]
 >>>>>>> a36fff8b3edf37a5b379da8db672172123928ba8
 
@@ -32,7 +32,7 @@ tonemap_mode = 2
 glow_enabled = true
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_v8kj3"]
-size = Vector3(69.408936, 1, 390.3403)
+size = Vector3(474.65448, 1, 692.307)
 
 [node name="level" type="Node3D" unique_id=364165678]
 process_mode = 3
@@ -52,10 +52,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -48.72427, -14.500142, 327.34
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -48.782085, -21.56941, 315.86823)
 
 [node name="DeadZone" type="Area3D" parent="." unique_id=2091972894]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.4167175, 0, 0)
 script = ExtResource("6_178xx")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="DeadZone" unique_id=144153741]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -54.611687, -53.576714, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -77.59811, -53.576714, 150.98334)
 shape = SubResource("BoxShape3D_v8kj3")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1760290417]
