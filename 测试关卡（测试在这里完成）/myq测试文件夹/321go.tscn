@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://cr0jr2wmengwa"]
+
+[ext_resource type="Script" uid="uid://xbyley2qu7gk" path="res://Content/Maps/Level1/321go.gd" id="1_g21n6"]
+
+[node name="Node" type="Control" unique_id=414186503]
+layout_mode = 3
+anchors_preset = 0
+mouse_filter = 2
+script = ExtResource("1_g21n6")
+
+[node name="countdowntimer" type="Timer" parent="." unique_id=1480696263]
+
+[node name="countdownlabel" type="Label" parent="." unique_id=1393603421]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 120
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true

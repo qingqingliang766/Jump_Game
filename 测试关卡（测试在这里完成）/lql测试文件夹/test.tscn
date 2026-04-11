@@ -3,10 +3,14 @@
 [ext_resource type="Texture2D" uid="uid://26x6tpw2jrk7" path="res://Content/asset/Platformer_8_Underworld_-_Low_Poly_3D_Models_Pack-c9a2e4b8/glb/source_extracted/Platformer_8_Underworld_Textures1.png" id="1_bfxf5"]
 [ext_resource type="Texture2D" uid="uid://b0was83x3jxbp" path="res://Content/asset/Platformer_8_Underworld_-_Low_Poly_3D_Models_Pack-c9a2e4b8/glb/source_extracted/Platformer_8_Underworld_Stone_Normal.jpg" id="2_4gokr"]
 <<<<<<< HEAD
+[ext_resource type="Script" uid="uid://dvuoop0fact4h" path="res://测试关卡（测试在这里完成）/lql测试文件夹/pillar_001_005.gd" id="3_4gokr"]
+=======
+<<<<<<< HEAD
 [ext_resource type="PackedScene" uid="uid://weovdeq6bju8" path="res://Content/characters/Player/player.tscn" id="3_4gokr"]
 =======
 [ext_resource type="Script" uid="uid://dhlx455lq26jw" path="res://Content/Maps/Level1/pillar_001_005.gd" id="3_4gokr"]
 >>>>>>> 5d5358e9a7ac2fa83e0e0472c5d3a442e38720fc
+>>>>>>> effb852d83d23861ff733b9c67bab74d9d088784
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_bfxf5"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -208,7 +212,7 @@ transform = Transform3D(-0.556576, 0, 0.83079666, 0, 1, 0, -0.83079666, 0, -0.55
 mesh = SubResource("ArrayMesh_mx81a")
 
 [node name="pillar_001_005" type="MeshInstance3D" parent="obstacle_2_001_001" unique_id=1778770558]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.590567, 1.7746019, -3.407948)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.591648, 1.7485509, -3.409243)
 mesh = SubResource("ArrayMesh_1xyai")
 script = ExtResource("3_4gokr")
 
