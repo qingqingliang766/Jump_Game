@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://clhroivbwf5qw"
+path="res://.godot/imported/卡通类 拾取金币等奖励音阶变化combo01_爱给网_aigei_com.mp3-34a217c825f7aa43b2ae0198a47db10b.mp3str"
+
+[deps]
+
+source_file="res://测试关卡（测试在这里完成）/xzn测试文件夹/卡通类 拾取金币等奖励音阶变化combo01_爱给网_aigei_com.mp3"
+dest_files=["res://.godot/imported/卡通类 拾取金币等奖励音阶变化combo01_爱给网_aigei_com.mp3-34a217c825f7aa43b2ae0198a47db10b.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

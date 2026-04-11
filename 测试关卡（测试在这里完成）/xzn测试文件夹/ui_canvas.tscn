@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://dad2v66762wej"]
+
+[ext_resource type="Script" uid="uid://ccyyj6hw57lke" path="res://测试关卡（测试在这里完成）/xzn测试文件夹/UICounter.gd" id="1_8h0n1"]
+
+[node name="UICanvas" type="Control" unique_id=1794769155]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_8h0n1")
+
+[node name="CoinLabel" type="Label" parent="." unique_id=1509114825]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 20.0
+offset_right = 60.0
+offset_bottom = 43.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 32

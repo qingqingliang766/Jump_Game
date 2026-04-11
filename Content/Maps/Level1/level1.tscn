@@ -16,6 +16,8 @@
 [ext_resource type="PackedScene" uid="uid://bvdq73u4kthl1" path="res://测试关卡（测试在这里完成）/xbb测试文件夹/static_body_441.tscn" id="14_ggyc6"]
 [ext_resource type="PackedScene" uid="uid://cwk2fj7k4ltot" path="res://测试关卡（测试在这里完成）/xbb测试文件夹/static_body_1133.tscn" id="15_iojm8"]
 [ext_resource type="PackedScene" uid="uid://u7xki5pfoafi" path="res://Content/asset/Platformer_8_Underworld_-_Low_Poly_3D_Models_Pack-c9a2e4b8/glb/source_extracted/Separate_assets_glb_extracted/Separate_assets_glb/wall_001.glb" id="16_w2cyy"]
+[ext_resource type="PackedScene" uid="uid://npalx28vsou6" path="res://测试关卡（测试在这里完成）/xzn测试文件夹/coin_001_001.tscn" id="17_onc3y"]
+[ext_resource type="PackedScene" uid="uid://dad2v66762wej" path="res://测试关卡（测试在这里完成）/xzn测试文件夹/ui_canvas.tscn" id="18_lycwr"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_crycw"]
 panorama = ExtResource("1_nedd6")
@@ -44,10 +46,10 @@ transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545
 shadow_enabled = true
 
 [node name="Player" parent="." unique_id=1741735744 instance=ExtResource("2_davdf")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -48.72427, -14.500142, 152.83418)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -48.72427, -14.500142, 326.12784)
 
 [node name="Platformer_8_Underworld" parent="." unique_id=667664442 instance=ExtResource("4_qsh25")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -48.782085, -21.56941, 315.86823)
+transform = Transform3D(0.999766, -0.019541794, -0.009280197, 0.019565146, 0.9998056, 0.0024323657, 0.009230861, -0.0026133636, 0.999954, -49.400562, -19.983782, 316.5065)
 
 [node name="DeadZone" type="Area3D" parent="." unique_id=2091972894]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.4167175, 0, 0)
@@ -121,5 +123,10 @@ transform = Transform3D(1.4, 0, 0, 0, 1.4, 0, 0, 0, 1.4, -48.707447, -16.77953, 
 
 [node name="wall_0013" parent="door" unique_id=1673209938 instance=ExtResource("16_w2cyy")]
 transform = Transform3D(1.4, 0, 0, 0, 1.4, 0, 0, 0, 1.4, -48.707447, -16.77953, 302.1367)
+
+[node name="coin_001_001" parent="." unique_id=666300252 instance=ExtResource("17_onc3y")]
+transform = Transform3D(1.6698718, 0, 1.1006943, 0, 2, 0, -1.1006943, 0, 1.6698718, -49.235783, -13.026412, 285.98602)
+
+[node name="UICanvas" parent="." unique_id=1794769155 instance=ExtResource("18_lycwr")]
 
 [connection signal="body_entered" from="DeadZone" to="DeadZone" method="_on_body_entered"]
