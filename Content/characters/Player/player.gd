@@ -70,3 +70,7 @@ func _physics_process(delta: float) -> void:
 
 	# 6. 调用内置方法执行实际移动与碰撞
 	move_and_slide()
+
+
+func _on_area_3d_body_entered(body: Node3D) -> void:
+	pass # Replace with function body.
