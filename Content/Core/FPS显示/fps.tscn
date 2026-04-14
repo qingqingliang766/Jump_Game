@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://cjargluk71ee5"]
+
+[ext_resource type="Script" uid="uid://bhqe7302vs23q" path="res://Content/Core/FPS显示/fps.gd" id="1_1up7e"]
+[ext_resource type="FontFile" uid="uid://b65bjb20q4oh4" path="res://Content/Core/smiley-sans-v2.0.1/SmileySans-Oblique.otf" id="2_1up7e"]
+
+[node name="FPS" type="CanvasLayer" unique_id=1023350595]
+script = ExtResource("1_1up7e")
+
+[node name="Label" type="Label" parent="." unique_id=1420254443]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -40.0
+offset_bottom = 20.0
+grow_horizontal = 0
+theme_override_fonts/font = ExtResource("2_1up7e")
+theme_override_font_sizes/font_size = 20

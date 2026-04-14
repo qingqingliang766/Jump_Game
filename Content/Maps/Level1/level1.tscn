@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://drtdohhbijyn2" path="res://Content/Core/开始菜单/开始菜单.tscn" id="9_7jt2p"]
 [ext_resource type="PackedScene" uid="uid://cjugg6g532hrf" path="res://测试关卡（测试在这里完成）/myq测试文件夹/canvas_layer.tscn" id="9_vkpin"]
 [ext_resource type="PackedScene" uid="uid://bs2ahofs5m0xw" path="res://测试关卡（测试在这里完成）/xzn测试文件夹/皇冠区域.tscn" id="10_vkpin"]
+[ext_resource type="PackedScene" uid="uid://cjargluk71ee5" path="res://Content/Core/FPS显示/fps.tscn" id="11_lycwr"]
 [ext_resource type="PackedScene" uid="uid://cr0jr2wmengwa" path="res://测试关卡（测试在这里完成）/myq测试文件夹/321go.tscn" id="12_jjg00"]
 [ext_resource type="PackedScene" uid="uid://c1mdm12hhaqyc" path="res://测试关卡（测试在这里完成）/xbb测试文件夹/static_body_123.tscn" id="13_l0o06"]
 [ext_resource type="PackedScene" uid="uid://bvdq73u4kthl1" path="res://测试关卡（测试在这里完成）/xbb测试文件夹/static_body_441.tscn" id="14_ggyc6"]
@@ -82,6 +83,8 @@ mouse_filter = 2
 visible = false
 
 [node name="Node" parent="CanvasLayer" unique_id=414186503 instance=ExtResource("10_vkpin")]
+
+[node name="FPS" parent="CanvasLayer" unique_id=1023350595 instance=ExtResource("11_lycwr")]
 
 [node name="DefaultSpawnPoint" type="Marker3D" parent="." unique_id=814880488]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -49.165253, -12.442144, 23.483757)
