@@ -110,9 +110,6 @@ func _handle_footsteps(_delta: float, direction: Vector3) -> void:
 		if footstep_player.playing:
 			footstep_player.stop()
 
-func _on_area_3d_body_entered(body: Node3D) -> void:
-	pass # Replace with function body.
-
 # ==============================
 # 爱心加速功能（新增）
 # ==============================

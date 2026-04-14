@@ -101,10 +101,10 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="StaticBody3D" parent="." unique_id=1160286444 instance=ExtResource("13_l0o06")]
-transform = Transform3D(0.99999654, -0.0026005656, 0, 0.0026005656, 0.99999654, 0, 0, 0, 1, -52.01385, -16.665348, 58.897015)
+transform = Transform3D(0.99999654, -0.0026005656, 0, 0.0026005656, 0.99999654, 0, 0, 0, 1, -48.63433, -16.665348, 58.897015)
 
 [node name="StaticBody3D2" parent="." unique_id=1489580715 instance=ExtResource("13_l0o06")]
-transform = Transform3D(0.99999654, -0.0026005656, 0, 0.0026005656, 0.99999654, 0, 0, 0, 1, -47.55818, -16.790363, 63.481026)
+transform = Transform3D(0.99999654, -0.0026005656, 0, 0.0026005656, 0.99999654, 0, 0, 0, 1, -45.814285, -16.790363, 65.53675)
 
 [node name="StaticBody3D3" parent="." unique_id=1826172453 instance=ExtResource("14_ggyc6")]
 transform = Transform3D(0.8744963, 0.016806737, 0.48474124, -0.014699502, 0.99985886, -0.0081480695, -0.48480964, 1.8126389e-09, 0.87461984, -46.97894, -16.53023, 41.741615)
@@ -133,7 +133,7 @@ transform = Transform3D(1.4, 0, 0, 0, 1.4, 0, 0, 0, 1.4, -49.48938, -16.77953, 3
 transform = Transform3D(1.4, 0, 0, 0, 1.4, 0, 0, 0, 1.4, -49.394268, -16.77953, 302.1367)
 
 [node name="coin_001_001" parent="." unique_id=666300252 instance=ExtResource("17_onc3y")]
-transform = Transform3D(1.6698718, 0, 1.1006943, 0, 2, 0, -1.1006943, 0, 1.6698718, -49.235783, -13.026412, 285.98602)
+transform = Transform3D(1.6698718, 0, 1.1006943, 0, 2, 0, -1.1006943, 0, 1.6698718, -48.11679, -13.026412, 285.98602)
 
 [node name="UICanvas" parent="." unique_id=1794769155 instance=ExtResource("18_lycwr")]
 
