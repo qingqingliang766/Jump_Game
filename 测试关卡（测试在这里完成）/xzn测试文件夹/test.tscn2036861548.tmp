@@ -108,5 +108,5 @@ script = ExtResource("8_r4uw3")
 [node name="rapid CollisionShape3D124" type="CollisionShape3D" parent="rapid heart_001_001/heartArea3D" unique_id=1248770915]
 shape = SubResource("ConcavePolygonShape3D_pd84a")
 
-[node name="heartAudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="rapid heart_001_001/heartArea3D" unique_id=737889798]
+[node name="heart AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="rapid heart_001_001/heartArea3D" unique_id=737889798]
 stream = ExtResource("7_7bdad")

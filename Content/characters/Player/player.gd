@@ -74,3 +74,24 @@ func _physics_process(delta: float) -> void:
 
 func _on_area_3d_body_entered(body: Node3D) -> void:
 	pass # Replace with function body.
+
+# ==============================
+# 爱心加速功能（新增）
+# ==============================
+func start_boost(boost_speed: float, duration: float):
+	# 保存原来的速度
+	var original_walk = walk_speed
+	var original_sprint = sprint_speed
+	
+	# 临时加速
+	walk_speed = boost_speed
+	sprint_speed = boost_speed
+	current_speed = boost_speed
+	
+	# 等待5秒后恢复
+	await get_tree().create_timer(duration).timeout
+	
+	# 恢复原来的速度
+	walk_speed = original_walk
+	sprint_speed = original_sprint
+	current_speed = original_walk
