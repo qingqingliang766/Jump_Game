@@ -18,17 +18,14 @@ func toggle_pause():
 	# !get_tree().paused 的意思就是“取反”，如果现在没停就停，停了就恢复
 	var is_paused = !get_tree().paused
 	get_tree().paused = is_paused 
+	bgm_player.stream_paused = is_paused
 	
 	# 2. 处理 UI 的显示和隐藏
 	if is_paused:
 		pause_menu.show()
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE) # 释放鼠标
 		# 专家建议：让第一个按钮获得焦点，方便手柄或键盘操作
-		pause_menu.get_node("MarginContainer/VBoxContainer/Play_Button").grab_focus()
+		pause_menu.get_node("VBoxContainer/Play_Button").grab_focus()
 	else:
 		pause_menu.hide()
 		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED) # 重新锁死鼠标
-
-
-func _on_dead_zone_body_entered(_body: Node3D) -> void:
-	pass # Replace with function body.

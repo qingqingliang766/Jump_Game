@@ -43,6 +43,7 @@ environment = SubResource("Environment_v38iq")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=259291443]
 transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, -45.93477, 2.9284935, 108.92136)
+light_energy = 0.815
 shadow_enabled = true
 
 [node name="Player" parent="." unique_id=1741735744 instance=ExtResource("2_davdf")]
@@ -60,8 +61,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -77.59811, -53.576714, 150.98
 shape = SubResource("BoxShape3D_v8kj3")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1760290417]
+process_mode = 3
 stream = ExtResource("8_2ccuo")
-volume_db = -18.0
+volume_db = -20.0
 
 [node name="旋转石柱" parent="." unique_id=1334009841 instance=ExtResource("7_4r7mq")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.087938, 9.4559, -15.515877)

@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://drtdohhbijyn2"]
 
 [ext_resource type="Script" uid="uid://cbqdfdfg7be7e" path="res://Content/Core/开始菜单/main_menu.gd" id="1_4knqn"]
-[ext_resource type="Texture2D" uid="uid://cjdx7v1owyy7g" path="res://Content/Core/开始菜单/OIP-C.jpg" id="2_m14pg"]
+[ext_resource type="Texture2D" uid="uid://dnfjwsv24ja1j" path="res://Content/asset/游戏图片.png" id="2_m14pg"]
 
 [node name="开始菜单" type="Control" unique_id=455735168]
 process_mode = 3
@@ -20,8 +20,12 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_top = -1.0
+offset_right = 1564.0
+offset_bottom = 751.0
 grow_horizontal = 2
 grow_vertical = 2
+scale = Vector2(0.4500714, 0.4898066)
 
 [node name="Background" type="TextureRect" parent="MarginContainer" unique_id=39073990]
 clip_contents = true
@@ -29,20 +33,28 @@ layout_mode = 2
 texture = ExtResource("2_m14pg")
 stretch_mode = 6
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=1328911704]
-clip_contents = true
-layout_mode = 2
-size_flags_vertical = 8
-size_flags_stretch_ratio = 5.06
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1328911704]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -98.40503
+offset_top = -35.0
+offset_right = 98.40503
+offset_bottom = 35.0
+grow_horizontal = 2
+grow_vertical = 2
 
-[node name="Play_Button" type="Button" parent="MarginContainer/VBoxContainer" unique_id=301182718]
+[node name="Play_Button" type="Button" parent="VBoxContainer" unique_id=301182718]
 clip_contents = true
 layout_mode = 2
 text = "开始游戏"
 
-[node name="Exit_Button" type="Button" parent="MarginContainer/VBoxContainer" unique_id=1889097907]
+[node name="Exit_Button" type="Button" parent="VBoxContainer" unique_id=1889097907]
 layout_mode = 2
 text = "退出游戏"
 
-[connection signal="pressed" from="MarginContainer/VBoxContainer/Play_Button" to="." method="_on_play_button_pressed"]
-[connection signal="pressed" from="MarginContainer/VBoxContainer/Exit_Button" to="." method="_on_exit_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/Play_Button" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/Exit_Button" to="." method="_on_exit_button_pressed"]

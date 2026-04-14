@@ -5,20 +5,27 @@ extends CharacterBody3D
 # ==========================================
 @export_category("Movement")
 @export var walk_speed: float = 8.0
-@export var sprint_speed: float = 4.5
+# 注意：你设定的冲刺速度(4.5)比走路(8.0)还慢。如果想加速，记得在面板里把它调大，比如 12.0
+@export var sprint_speed: float = 10 
 @export var jump_velocity: float = 10.0
 @export var acceleration: float = 10.0 # 移动平滑过渡系数
 
 @export_category("Camera")
 @export var mouse_sensitivity: float = 0.002 # 鼠标灵敏度 (弧度制)
 
+@export_category("Audio")
+@export var footstep_interval: float = 0.5 # 每步之间的基础间隔时间 (秒)
+
 # ==========================================
 # 节点引用
 # ==========================================
 @onready var camera: Camera3D = $Camera3D
+# 确保在 CharacterBody3D 下添加了一个名为 FootstepPlayer 的 AudioStreamPlayer3D 节点
+@onready var footstep_player: AudioStreamPlayer3D = $FootstepPlayer
 
 # 运行时变量
 var current_speed: float = walk_speed
+var footstep_timer: float = 0.0
 
 func _ready() -> void:
 	# 隐藏并捕获鼠标
@@ -53,8 +60,13 @@ func _physics_process(delta: float) -> void:
 	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
 		velocity.y = jump_velocity
 
-	## 3. 速度切换 (按住加速键使用冲刺速度)
-	#current_speed = sprint_speed if Input.is_action_pressed("speed_up") else walk_speed
+	# 3. 速度切换
+	# 我帮你取消了注释，这样冲刺时脚步声才会变快。
+	# 如果你的 Input Map 里还没加 "speed_up" 这个动作，记得加上，否则运行时会报错。
+	if Input.is_action_pressed("speed_up"):
+		current_speed = sprint_speed
+	else:
+		current_speed = walk_speed
 
 	# 4. 获取输入方向并映射到 3D 空间
 	var input_dir := Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
@@ -70,7 +82,30 @@ func _physics_process(delta: float) -> void:
 
 	# 6. 调用内置方法执行实际移动与碰撞
 	move_and_slide()
+	
+	# 7. 处理脚步声
+	_handle_footsteps(delta, direction)
 
-
-func _on_area_3d_body_entered(body: Node3D) -> void:
-	pass # Replace with function body.
+# ==========================================
+# 自定义辅助方法
+# ==========================================
+# ==========================================
+# 适用于“长段连续脚步声”的逻辑
+# ==========================================
+func _handle_footsteps(_delta: float, direction: Vector3) -> void:
+	var is_moving = is_on_floor() and direction.length() > 0 and Vector2(velocity.x, velocity.z).length() > 0.1
+	
+	if is_moving:
+		# 如果还没有在播放，就开始播放
+		if not footstep_player.playing:
+			footstep_player.play()
+			
+		# 根据是走路还是冲刺，调整长音效的播放速度
+		if current_speed > walk_speed:
+			footstep_player.pitch_scale = 1.3 # 跑得快，播放速度变快 (具体数值根据你的音频微调)
+		else:
+			footstep_player.pitch_scale = 1.0 # 正常速度
+	else:
+		# 没在移动，或者在空中，立刻停止播放
+		if footstep_player.playing:
+			footstep_player.stop()
