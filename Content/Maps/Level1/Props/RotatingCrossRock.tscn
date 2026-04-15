@@ -1,6 +1,6 @@
 [gd_scene format=4 uid="uid://c27pogd3aia3b"]
 
-[ext_resource type="Script" uid="uid://c3x7mpspf55sg" path="res://Content/Maps/Level1/obstacle_4_001_001.gd" id="1_nb63g"]
+[ext_resource type="Script" uid="uid://c3x7mpspf55sg" path="res://Content/Maps/Level1/rock_pile/obstacle_4_001_001.gd" id="1_nb63g"]
 [ext_resource type="Texture2D" uid="uid://26x6tpw2jrk7" path="res://Content/asset/Platformer_8_Underworld_-_Low_Poly_3D_Models_Pack-c9a2e4b8/glb/source_extracted/Platformer_8_Underworld_Textures1.png" id="2_4jt1a"]
 [ext_resource type="Texture2D" uid="uid://b0was83x3jxbp" path="res://Content/asset/Platformer_8_Underworld_-_Low_Poly_3D_Models_Pack-c9a2e4b8/glb/source_extracted/Platformer_8_Underworld_Stone_Normal.jpg" id="3_00xik"]
 

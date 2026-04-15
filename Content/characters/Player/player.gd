@@ -38,14 +38,14 @@ func _ready() -> void:
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	
 	# 🔥 自动找到UI节点，完全不用手动绑定
-	boost_timer_label = get_node("/root/Test/UICanvas/BoostTimerLabel")
+	boost_timer_label = get_node("../UICanvas/BoostTimerLabel")
 	
 	# 初始化隐藏文字
 	if boost_timer_label != null:
 		boost_timer_label.visible = false
 		print("UI节点绑定成功！")
 	else:
-		print("错误：找不到UI节点，请检查场景名是否为Test")
+		print("错误：找不到UI节点，请检查场景名是否为level1")
 
 # ==========================================
 # 输入事件处理
