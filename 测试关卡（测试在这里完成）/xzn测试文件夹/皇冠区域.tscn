@@ -1,6 +1,6 @@
 [gd_scene format=4 uid="uid://bs2ahofs5m0xw"]
 
-[ext_resource type="Script" uid="uid://ns8u0nx6xcgl" path="res://测试关卡（测试在这里完成）/xzn测试文件夹/area_3d.gd" id="1_px5ib"]
+[ext_resource type="Script" uid="uid://ns8u0nx6xcgl" path="res://测试关卡（测试在这里完成）/xzn测试文件夹/hgarea_3d.gd" id="1_px5ib"]
 [ext_resource type="Texture2D" uid="uid://26x6tpw2jrk7" path="res://Content/asset/Platformer_8_Underworld_-_Low_Poly_3D_Models_Pack-c9a2e4b8/glb/source_extracted/Platformer_8_Underworld_Textures1.png" id="3_x6r2j"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_qcp0f"]

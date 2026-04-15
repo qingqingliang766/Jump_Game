@@ -1,9 +1,12 @@
 [gd_scene format=3 uid="uid://srynhn1g3bas"]
 
+[ext_resource type="Material" uid="uid://bqvpwtn6g5ajm" path="res://Content/asset/Materials/floor.tres" id="1_bf5mm"]
 [ext_resource type="PackedScene" uid="uid://npalx28vsou6" path="res://测试关卡（测试在这里完成）/xzn测试文件夹/coin_001_001.tscn" id="3_1yeyp"]
 [ext_resource type="PackedScene" uid="uid://bs2ahofs5m0xw" path="res://测试关卡（测试在这里完成）/xzn测试文件夹/皇冠区域.tscn" id="3_qcp0f"]
 [ext_resource type="PackedScene" uid="uid://weovdeq6bju8" path="res://Content/characters/Player/player.tscn" id="3_vsede"]
 [ext_resource type="PackedScene" uid="uid://dad2v66762wej" path="res://测试关卡（测试在这里完成）/xzn测试文件夹/ui_canvas.tscn" id="4_vsede"]
+[ext_resource type="PackedScene" uid="uid://dosauaswsv0jx" path="res://测试关卡（测试在这里完成）/xzn测试文件夹/新diamond_001_001.tscn" id="6_bf5mm"]
+[ext_resource type="PackedScene" uid="uid://twjtx1n0fnck" path="res://测试关卡（测试在这里完成）/xzn测试文件夹/rapid_heart_001_001.tscn" id="7_7bdad"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_qcp0f"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -30,14 +33,21 @@ shadow_enabled = true
 transform = Transform3D(0.99999994, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 use_collision = true
 size = Vector3(53.541138, 0.1, 50.54541)
+material = ExtResource("1_bf5mm")
 
 [node name="Player" parent="." unique_id=1741735744 groups=["player"] instance=ExtResource("3_vsede")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.2724083, 4.7726955, -0.23692012)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.29341, 2.8165512, -0.23692012)
 
-[node name="Area3D" parent="." unique_id=508210702 instance=ExtResource("3_qcp0f")]
+[node name="hgArea3D" parent="." unique_id=508210702 instance=ExtResource("3_qcp0f")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -6.87969, 0.87882996, -4.3953094)
 
 [node name="coin_001_001" parent="." unique_id=666300252 instance=ExtResource("3_1yeyp")]
 transform = Transform3D(1.6698718, 0, 1.1006944, 0, 2, 0, -1.1006944, 0, 1.6698718, 1.2852454, 1.6130109, -9.656187)
 
 [node name="UICanvas" parent="." unique_id=1794769155 instance=ExtResource("4_vsede")]
+
+[node name="diamond_001_001" parent="." unique_id=25046432 instance=ExtResource("6_bf5mm")]
+transform = Transform3D(1.9242314, 0, -0.5452836, 0, 2, 0, 0.54528373, 0, 1.9242309, 0, 1.4268398, 10.696808)
+
+[node name="rapid heart_001_001" parent="." unique_id=1953544679 instance=ExtResource("7_7bdad")]
+transform = Transform3D(1.4645879, 0, 1.3619773, 0, 2, 0, -1.3619773, 0, 1.4645879, 3.9930124, 1.452169, 10.613434)

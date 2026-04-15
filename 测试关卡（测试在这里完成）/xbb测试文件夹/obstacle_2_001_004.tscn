@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://26x6tpw2jrk7" path="res://Content/asset/Platformer_8_Underworld_-_Low_Poly_3D_Models_Pack-c9a2e4b8/glb/source_extracted/Platformer_8_Underworld_Textures1.png" id="1_tgjlo"]
 [ext_resource type="Texture2D" uid="uid://b0was83x3jxbp" path="res://Content/asset/Platformer_8_Underworld_-_Low_Poly_3D_Models_Pack-c9a2e4b8/glb/source_extracted/Platformer_8_Underworld_Stone_Normal.jpg" id="2_fdlrr"]
-[ext_resource type="Script" path="res://Content/Maps/Level1/obstacle_2_001_004.gd" id="3_x3iys"]
+[ext_resource type="Script" uid="uid://4uw1knke1te2" path="res://Content/Maps/Level1/rock_pile/obstacle_2_001_004.gd" id="3_x3iys"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_igpnj"]
 resource_name = "Metal"

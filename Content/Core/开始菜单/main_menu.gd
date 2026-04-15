@@ -9,9 +9,9 @@ extends Control
 @export var bg_anim_speed: float = 0.8
 # ================================================
 
-@onready var play_btn: Button = $MarginContainer/VBoxContainer/Play_Button
-@onready var exit_btn: Button = $MarginContainer/VBoxContainer/Exit_Button
-@onready var vbox: VBoxContainer = $MarginContainer/VBoxContainer
+@onready var play_btn: Button = $VBoxContainer/Play_Button
+@onready var exit_btn: Button = $VBoxContainer/Exit_Button
+@onready var vbox: VBoxContainer = $VBoxContainer
 @onready var background: TextureRect = $MarginContainer/Background # 新增背景引用
 
 var is_loading: bool = false
@@ -55,13 +55,18 @@ func _on_play_button_pressed() -> void:
 	if is_loading: return
 	is_loading = true
 	
+	# === 暂停状态下的恢复逻辑 ===
 	if get_tree().paused:
-		get_tree().paused = false
-		self.hide()
-		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+		# 不要在这里自己写恢复逻辑了！
+		# 直接找到根节点 (level_1)，让它来统管恢复（它会顺便把 BGM 也恢复了）
+		var level_node = get_tree().current_scene
+		if level_node.has_method("toggle_pause"):
+			level_node.toggle_pause() 
+			
 		is_loading = false
 		return
 	
+	# === 正常主菜单下进入关卡的逻辑 (保持不变) ===
 	if start_level_path == "":
 		print("错误：关卡路径为空！")
 		is_loading = false
