@@ -20,10 +20,9 @@
 [ext_resource type="PackedScene" uid="uid://npalx28vsou6" path="res://测试关卡（测试在这里完成）/xzn测试文件夹/coin_001_001.tscn" id="17_onc3y"]
 [ext_resource type="PackedScene" uid="uid://dad2v66762wej" path="res://测试关卡（测试在这里完成）/xzn测试文件夹/ui_canvas.tscn" id="18_lycwr"]
 [ext_resource type="Texture2D" uid="uid://26x6tpw2jrk7" path="res://Content/asset/Platformer_8_Underworld_-_Low_Poly_3D_Models_Pack-c9a2e4b8/glb/source_extracted/Platformer_8_Underworld_Textures1.png" id="20_iyj7y"]
-[ext_resource type="Texture2D" uid="uid://b0was83x3jxbp" path="res://Content/asset/Platformer_8_Underworld_-_Low_Poly_3D_Models_Pack-c9a2e4b8/glb/source_extracted/Platformer_8_Underworld_Stone_Normal.jpg" id="21_kj7kp"]
-[ext_resource type="Script" uid="uid://dycth8ukng52h" path="res://Content/Maps/Level1/pillar_004_002.gd" id="22_iyj7y"]
 [ext_resource type="PackedScene" uid="uid://twjtx1n0fnck" path="res://测试关卡（测试在这里完成）/xzn测试文件夹/rapid_heart_001_001.tscn" id="20_njqax"]
 [ext_resource type="PackedScene" path="res://测试关卡（测试在这里完成）/xzn测试文件夹/新diamond_001_001.tscn" id="21_4yne5"]
+[ext_resource type="Texture2D" uid="uid://b0was83x3jxbp" path="res://Content/asset/Platformer_8_Underworld_-_Low_Poly_3D_Models_Pack-c9a2e4b8/glb/source_extracted/Platformer_8_Underworld_Stone_Normal.jpg" id="21_kj7kp"]
 [ext_resource type="PackedScene" uid="uid://dsxtsmlnyskvt" path="res://测试关卡（测试在这里完成）/dth测试文件夹/摆锤.tscn" id="22_iyj7y"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_crycw"]
@@ -198,7 +197,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -44.242413, -11.361351, 51.53
 [node name="pillar_004_002" type="MeshInstance3D" parent="." unique_id=1633408525]
 transform = Transform3D(-4.3711385e-08, -1, -4.371139e-08, 0, -4.371139e-08, 1, -0.99999994, 4.371139e-08, 1.9106855e-15, -48.650307, -32.560818, 71.08797)
 mesh = SubResource("ArrayMesh_akpmu")
-script = ExtResource("22_iyj7y")
+
 [node name="rapid heart_001_001" parent="." unique_id=1953544679 instance=ExtResource("20_njqax")]
 transform = Transform3D(1.4645879, 0, 1.3619773, 0, 2, 0, -1.3619773, 0, 1.4645879, -42.73738, -15.447895, 54.680622)
 
