@@ -4,9 +4,9 @@ extends CharacterBody3D
 # 导出参数 (在属性面板调节)
 # ==========================================
 @export_category("Movement")
-@export var walk_speed: float = 8.0
-@export var sprint_speed: float = 10 
-@export var jump_velocity: float = 10.0
+@export var walk_speed: float = 5.0
+@export var sprint_speed: float = 6 
+@export var jump_velocity: float = 6.0
 @export var acceleration: float = 10.0 # 移动平滑过渡系数
 
 @export_category("Camera")

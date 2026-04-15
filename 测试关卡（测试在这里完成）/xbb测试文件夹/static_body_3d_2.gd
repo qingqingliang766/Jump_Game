@@ -1,6 +1,6 @@
 extends StaticBody3D
 
-@export var 旋转周期: float = 8.0
+@export var 旋转周期: float = 4.0
 @export var 最大旋转角度: float = 360.0
 
 var timer: float = 0.0
