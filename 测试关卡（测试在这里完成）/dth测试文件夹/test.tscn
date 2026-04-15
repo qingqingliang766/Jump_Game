@@ -1,6 +1,8 @@
 [gd_scene format=3 uid="uid://boe341ln4f2rg"]
 
+[ext_resource type="Material" uid="uid://bqvpwtn6g5ajm" path="res://Content/asset/Materials/floor.tres" id="1_6ug3w"]
 [ext_resource type="PackedScene" uid="uid://weovdeq6bju8" path="res://Content/characters/Player/player.tscn" id="1_70oov"]
+[ext_resource type="PackedScene" uid="uid://dsxtsmlnyskvt" path="res://测试关卡（测试在这里完成）/dth测试文件夹/摆锤.tscn" id="3_fl3u1"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_5y365"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -25,7 +27,12 @@ transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545
 shadow_enabled = true
 
 [node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=1917468951]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.069711685, -0.034492493, 0.036958694)
 use_collision = true
 size = Vector3(50, 0.1, 50)
+material = ExtResource("1_6ug3w")
 
 [node name="Player" parent="." unique_id=1741735744 instance=ExtResource("1_70oov")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.9385996, 0)
+
+[node name="摆锤" parent="." unique_id=9145358 instance=ExtResource("3_fl3u1")]

@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://byswexmjn8rww" path="res://Content/asset/HDRI/kloofendal_48d_partly_cloudy_puresky_1k.hdr" id="1_nedd6"]
 [ext_resource type="PackedScene" uid="uid://weovdeq6bju8" path="res://Content/characters/Player/player.tscn" id="2_davdf"]
 [ext_resource type="PackedScene" uid="uid://bkaaihn7sj4kd" path="res://Content/Maps/Level1/platformer_8_underworld.scn" id="4_qsh25"]
-[ext_resource type="Script" uid="uid://dw4sb7roke11y" path="res://Content/Maps/Level1/dead_zone.gd" id="6_178xx"]
+[ext_resource type="Script" uid="uid://dw4sb7roke11y" path="res://Content/Maps/Level1/rock_pile/dead_zone.gd" id="6_178xx"]
 [ext_resource type="PackedScene" uid="uid://c27pogd3aia3b" path="res://Content/Maps/Level1/Props/RotatingCrossRock.tscn" id="7_4r7mq"]
 [ext_resource type="AudioStream" uid="uid://cowcvwck1juce" path="res://Content/asset/music/Gonzalo Nicolas - Summer.mp3" id="8_2ccuo"]
 [ext_resource type="PackedScene" uid="uid://m6mvfunuy3nk" path="res://Content/Core/crosshair.tscn" id="8_7jt2p"]
@@ -22,6 +22,9 @@
 [ext_resource type="Texture2D" uid="uid://26x6tpw2jrk7" path="res://Content/asset/Platformer_8_Underworld_-_Low_Poly_3D_Models_Pack-c9a2e4b8/glb/source_extracted/Platformer_8_Underworld_Textures1.png" id="20_iyj7y"]
 [ext_resource type="Texture2D" uid="uid://b0was83x3jxbp" path="res://Content/asset/Platformer_8_Underworld_-_Low_Poly_3D_Models_Pack-c9a2e4b8/glb/source_extracted/Platformer_8_Underworld_Stone_Normal.jpg" id="21_kj7kp"]
 [ext_resource type="Script" uid="uid://dycth8ukng52h" path="res://Content/Maps/Level1/pillar_004_002.gd" id="22_iyj7y"]
+[ext_resource type="PackedScene" uid="uid://twjtx1n0fnck" path="res://测试关卡（测试在这里完成）/xzn测试文件夹/rapid_heart_001_001.tscn" id="20_njqax"]
+[ext_resource type="PackedScene" path="res://测试关卡（测试在这里完成）/xzn测试文件夹/新diamond_001_001.tscn" id="21_4yne5"]
+[ext_resource type="PackedScene" uid="uid://dsxtsmlnyskvt" path="res://测试关卡（测试在这里完成）/dth测试文件夹/摆锤.tscn" id="22_iyj7y"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_crycw"]
 panorama = ExtResource("1_nedd6")
@@ -97,7 +100,7 @@ shadow_enabled = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -48.72427, -14.500142, 153.54715)
 
 [node name="Platformer_8_Underworld" parent="." unique_id=667664442 instance=ExtResource("4_qsh25")]
-transform = Transform3D(0.999766, -0.019541794, -0.009280197, 0.019565146, 0.9998056, 0.0024323657, 0.009230861, -0.0026133636, 0.999954, -49.400562, -20.864845, 316.5065)
+transform = Transform3D(0.999766, -0.019541794, -0.009280197, 0.019565146, 0.9998056, 0.0024323657, 0.009230861, -0.0026133636, 0.999954, -49.443836, -20.781883, 316.5408)
 
 [node name="DeadZone" type="Area3D" parent="." unique_id=2091972894]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.4167175, 0, 0)
@@ -193,5 +196,24 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -44.242413, -11.361351, 51.53
 transform = Transform3D(-4.3711385e-08, -1, -4.371139e-08, 0, -4.371139e-08, 1, -0.99999994, 4.371139e-08, 1.9106855e-15, -48.650307, -32.560818, 71.08797)
 mesh = SubResource("ArrayMesh_akpmu")
 script = ExtResource("22_iyj7y")
+[node name="rapid heart_001_001" parent="." unique_id=1953544679 instance=ExtResource("20_njqax")]
+transform = Transform3D(1.4645879, 0, 1.3619773, 0, 2, 0, -1.3619773, 0, 1.4645879, -42.73738, -15.447895, 54.680622)
+
+[node name="rapid heart_001_002" parent="." unique_id=1655892093 instance=ExtResource("20_njqax")]
+transform = Transform3D(1.4645879, 0, 1.3619773, 0, 2, 0, -1.3619773, 0, 1.4645879, -42.73738, -15.447895, 78.961044)
+
+[node name="diamond_001_001" parent="." unique_id=25046432 instance=ExtResource("21_4yne5")]
+transform = Transform3D(1.9242314, 0, -0.5452836, 0, 2, 0, 0.5452837, 0, 1.924231, -47.13754, -14.801375, 63.187103)
+
+[node name="diamond_001_002" parent="." unique_id=1949661735 instance=ExtResource("21_4yne5")]
+transform = Transform3D(1.9242314, 0, -0.5452836, 0, 2, 0, 0.5452837, 0, 1.924231, -46.769768, -14.801375, 76.32274)
+
+[node name="摆锤" parent="." unique_id=9145358 instance=ExtResource("22_iyj7y")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -48.991093, -20.400442, 238.9519)
+
+[node name="摆锤2" parent="." unique_id=147171797 instance=ExtResource("22_iyj7y")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -48.991093, -20.400442, 238.9519)
 
 [connection signal="body_entered" from="DeadZone" to="DeadZone" method="_on_body_entered"]
+
+[editable path="UICanvas"]
