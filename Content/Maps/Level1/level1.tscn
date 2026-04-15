@@ -156,7 +156,10 @@ transform = Transform3D(1.9242314, 0, -0.5452836, 0, 2, 0, 0.5452837, 0, 1.92423
 transform = Transform3D(1.9242314, 0, -0.5452836, 0, 2, 0, 0.5452837, 0, 1.924231, -46.769768, -14.801375, 76.32274)
 
 [node name="摆锤" parent="." unique_id=9145358 instance=ExtResource("22_iyj7y")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -48.991093, -20.400442, 238.40758)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -48.991093, -20.400442, 238.9519)
+
+[node name="摆锤2" parent="." unique_id=147171797 instance=ExtResource("22_iyj7y")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -48.991093, -20.400442, 238.9519)
 
 [connection signal="body_entered" from="DeadZone" to="DeadZone" method="_on_body_entered"]
 
