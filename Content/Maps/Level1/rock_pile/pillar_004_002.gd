@@ -1,9 +1,9 @@
 extends Node3D
 
 # ✅ 高度大幅提升，速度保持不变（直接用）
-@export var move_speed: float = 0.6   # 保持原慢速度，不影响跳跃
-@export var move_height: float = 2.8  # 上下幅度大幅拉高，比之前更高
-@export var start_offset: float = 0.0
+@export var move_speed: float = 3   # 保持原慢速度，不影响跳跃
+@export var move_height: float = 20 # 上下幅度大幅拉高，比之前更高
+@export var start_offset: float = 10
 
 var start_y: float
 
