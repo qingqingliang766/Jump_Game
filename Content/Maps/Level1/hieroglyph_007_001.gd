@@ -1,7 +1,7 @@
 extends Node3D
 
-@export var move_speed: float = 0.9
-@export var move_height: float = 3.5
+@export var move_speed: float = 100
+@export var move_height: float = 20
 @export var start_offset: float = 0.0
 
 var start_y: float

@@ -1,6 +1,6 @@
 extends StaticBody3D
 
-@export var max_angle: float = 90.0
+@export var max_angle: float = 120.0
 @export var swing_speed: float = 3.0
 
 var time_elapsed: float = 0.0
