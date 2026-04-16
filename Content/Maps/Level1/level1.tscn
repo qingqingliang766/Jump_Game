@@ -254,6 +254,9 @@ transform = Transform3D(1.6698718, 0, 1.1006943, 0, 2, 0, -1.1006943, 0, 1.66987
 [node name="coin_001_006" parent="." unique_id=43217429 instance=ExtResource("17_onc3y")]
 transform = Transform3D(1.6698718, 0, 1.1006943, 0, 2, 0, -1.1006943, 0, 1.6698718, -48.8643, -14.705809, 267.76404)
 
+[node name="coin_001_012" parent="." unique_id=363940445 instance=ExtResource("17_onc3y")]
+transform = Transform3D(1.6698718, 0, 1.1006943, 0, 2, 0, -1.1006943, 0, 1.6698718, -54.9725, -14.442782, 278.52502)
+
 [node name="coin_001_007" parent="." unique_id=580119069 instance=ExtResource("17_onc3y")]
 transform = Transform3D(1.6698718, 0, 1.1006943, 0, 2, 0, -1.1006943, 0, 1.6698718, -48.8643, -14.705809, 264.82233)
 
@@ -273,13 +276,10 @@ transform = Transform3D(1.6698718, 0, 1.1006943, 0, 2, 0, -1.1006943, 0, 1.66987
 transform = Transform3D(1.6698718, 0, 1.1006943, 0, 2, 0, -1.1006943, 0, 1.6698718, -48.8643, -15.167853, 210.26823)
 
 [node name="coin_001_011" parent="." unique_id=816357065 instance=ExtResource("17_onc3y")]
-transform = Transform3D(1.6698718, 0, 1.1006943, 0, 2, 0, -1.1006943, 0, 1.6698718, -58.029762, -15.167853, 194.8291)
+transform = Transform3D(1.6698718, 0, 1.1006943, 0, 2, 0, -1.1006943, 0, 1.6698718, -59.487957, -13.694852, 193.23653)
 
-[node name="coin_001_012" parent="." unique_id=1356627320 instance=ExtResource("17_onc3y")]
-transform = Transform3D(1.6698718, 0, 1.1006943, 0, 2, 0, -1.1006943, 0, 1.6698718, -58.029762, -15.167853, 190.95512)
-
-[node name="coin_001_013" parent="." unique_id=123826723 instance=ExtResource("17_onc3y")]
-transform = Transform3D(1.6698718, 0, 1.1006943, 0, 2, 0, -1.1006943, 0, 1.6698718, -38.581146, -15.167853, 190.95512)
+[node name="coin_001_013" parent="." unique_id=1814878864 instance=ExtResource("17_onc3y")]
+transform = Transform3D(1.6698718, 0, 1.1006943, 0, 2, 0, -1.1006943, 0, 1.6698718, -59.487957, -11.788232, 193.23653)
 
 [node name="coin_001_017" parent="." unique_id=2101442880 instance=ExtResource("17_onc3y")]
 transform = Transform3D(1.6698718, 0, 1.1006943, 0, 2, 0, -1.1006943, 0, 1.6698718, -47.340553, -15.167853, 175.73796)
@@ -348,7 +348,10 @@ transform = Transform3D(1.6698718, 0, 1.1006943, 0, 2, 0, -1.1006943, 0, 1.66987
 transform = Transform3D(1.6698718, 0, 1.1006943, 0, 2, 0, -1.1006943, 0, 1.6698718, -48.211117, -15.167853, 181.5386)
 
 [node name="coin_001_014" parent="." unique_id=1047028788 instance=ExtResource("17_onc3y")]
-transform = Transform3D(1.6698718, 0, 1.1006943, 0, 2, 0, -1.1006943, 0, 1.6698718, -38.35612, -15.167853, 194.69275)
+transform = Transform3D(1.6698718, 0, 1.1006943, 0, 2, 0, -1.1006943, 0, 1.6698718, -38.89394, -13.166581, 193.17476)
+
+[node name="coin_001_039" parent="." unique_id=490260627 instance=ExtResource("17_onc3y")]
+transform = Transform3D(1.6698718, 0, 1.1006943, 0, 2, 0, -1.1006943, 0, 1.6698718, -38.89394, -11.278638, 193.17476)
 
 [node name="UICanvas" parent="." unique_id=1794769155 instance=ExtResource("18_lycwr")]
 
