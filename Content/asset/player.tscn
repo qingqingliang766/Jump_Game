@@ -1,0 +1,99 @@
+[gd_scene format=3 uid="uid://y7hg6dvreucp"]
+
+[ext_resource type="Script" uid="uid://c7qx316ugky18" path="res://Content/asset/player.gd" id="1_ffboj"]
+[ext_resource type="PackedScene" uid="uid://bdm1pu5gl6k53" path="res://Content/asset/character.tscn" id="2_nero3"]
+[ext_resource type="Texture2D" uid="uid://crcqh2yvmm76r" path="res://Content/asset/blob_shadow.png" id="3_0c7wt"]
+[ext_resource type="Texture2D" uid="uid://0odt7cvj574e" path="res://Content/asset/colormap.png" id="3_efeg2"]
+[ext_resource type="ArrayMesh" path="res://Content/asset/dust.res" id="4_mvhqy"]
+[ext_resource type="AudioStream" uid="uid://1av0hn27j6pe" path="res://Content/asset/walking.ogg" id="5_ics1s"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_gdq8c"]
+radius = 0.3
+height = 1.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xk7cj"]
+albedo_texture = ExtResource("3_efeg2")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_q7stj"]
+diffuse_mode = 2
+specular_mode = 2
+metallic_specular = 0.0
+backlight = Color(0, 0.521569, 0.709804, 1)
+billboard_keep_scale = true
+grow_amount = 1.882
+proximity_fade_distance = 0.25
+
+[sub_resource type="Curve" id="Curve_xh1e2"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.249284, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_f46kd"]
+curve = SubResource("Curve_xh1e2")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_3rerk"]
+particle_flag_align_y = true
+emission_shape = 1
+emission_sphere_radius = 0.2
+direction = Vector3(0, 0, 0)
+gravity = Vector3(0, 0.1, 0)
+scale_min = 0.75
+scale_curve = SubResource("CurveTexture_f46kd")
+
+[node name="Player" type="CharacterBody3D" unique_id=944817897 groups=["player"]]
+collision_layer = 2
+script = ExtResource("1_ffboj")
+
+[node name="Collider" type="CollisionShape3D" parent="." unique_id=1445008503]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.55, 0)
+shape = SubResource("CapsuleShape3D_gdq8c")
+
+[node name="Character" parent="." unique_id=645290424 instance=ExtResource("2_nero3")]
+transform = Transform3D(-1, 0, -1.509958e-07, 0, 1, 0, 1.509958e-07, 0, -1, 0, 0, 0)
+
+[node name="leg-left" parent="Character/character/root" parent_id_path=PackedInt32Array(645290424, 930856554) index="0" unique_id=1245786309]
+surface_material_override/0 = SubResource("StandardMaterial3D_xk7cj")
+
+[node name="leg-right" parent="Character/character/root" parent_id_path=PackedInt32Array(645290424, 930856554) index="1" unique_id=2105681645]
+surface_material_override/0 = SubResource("StandardMaterial3D_xk7cj")
+
+[node name="torso" parent="Character/character/root" parent_id_path=PackedInt32Array(645290424, 930856554) index="2" unique_id=1420051450]
+surface_material_override/0 = SubResource("StandardMaterial3D_xk7cj")
+
+[node name="arm-left" parent="Character/character/root/torso" index="0" unique_id=844264409]
+surface_material_override/0 = SubResource("StandardMaterial3D_xk7cj")
+
+[node name="arm-right" parent="Character/character/root/torso" index="1" unique_id=525956347]
+surface_material_override/0 = SubResource("StandardMaterial3D_xk7cj")
+
+[node name="antenna" parent="Character/character/root/torso" index="2" unique_id=1592746442]
+surface_material_override/0 = SubResource("StandardMaterial3D_xk7cj")
+
+[node name="Shadow" type="Decal" parent="." unique_id=666133386]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.9, 0)
+size = Vector3(1, 2, 1)
+texture_albedo = ExtResource("3_0c7wt")
+modulate = Color(1, 1, 1, 0.705882)
+normal_fade = 0.5
+
+[node name="ParticlesTrail" type="GPUParticles3D" parent="." unique_id=1351817295]
+physics_interpolation_mode = 2
+material_override = SubResource("StandardMaterial3D_q7stj")
+cast_shadow = 0
+amount = 60
+fixed_fps = 0
+process_material = SubResource("ParticleProcessMaterial_3rerk")
+draw_pass_1 = ExtResource("4_mvhqy")
+
+[node name="SoundFootsteps" type="AudioStreamPlayer" parent="." unique_id=956741629]
+stream = ExtResource("5_ics1s")
+volume_db = -5.0
+pitch_scale = 1.25
+autoplay = true
+
+[node name="CameraPivot" type="SpringArm3D" parent="." unique_id=575301051]
+transform = Transform3D(1, 0, 0, 0, 0.9659258, 0.25881904, 0, -0.25881904, 0.9659258, 0, 1.6968496, 0)
+spring_length = 5.0
+
+[node name="Camera3D" type="Camera3D" parent="CameraPivot" unique_id=297754354]
+
+[editable path="Character"]

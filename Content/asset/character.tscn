@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://bdm1pu5gl6k53"]
+
+[ext_resource type="PackedScene" uid="uid://cw4fpmsghqxij" path="res://Content/asset/character.glb" id="1_vn7w5"]
+[ext_resource type="Texture2D" uid="uid://0odt7cvj574e" path="res://Content/asset/colormap.png" id="2_rcndt"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ha6m7"]
+albedo_texture = ExtResource("2_rcndt")
+
+[node name="character" unique_id=70358996 instance=ExtResource("1_vn7w5")]
+
+[node name="leg-left" parent="character/root" parent_id_path=PackedInt32Array(930856554) index="0" unique_id=1245786309]
+transform = Transform3D(0.96592593, 0, 0.2588191, 0, 1, 0, -0.2588191, 0, 0.96592593, 0.125, 0.17625, -0.02375)
+surface_material_override/0 = SubResource("StandardMaterial3D_ha6m7")
+
+[node name="leg-right" parent="character/root" parent_id_path=PackedInt32Array(930856554) index="1" unique_id=2105681645]
+transform = Transform3D(0.96592593, 0, -0.2588191, 0, 1, 0, 0.2588191, 0, 0.96592593, -0.125, 0.17625, -0.023750002)
+surface_material_override/0 = SubResource("StandardMaterial3D_ha6m7")
+
+[node name="torso" parent="character/root" parent_id_path=PackedInt32Array(930856554) index="2" unique_id=1420051450]
+transform = Transform3D(1, 0, 0, 0, 0.996194, 0.08715568, 0, -0.08715568, 0.996194, -1.80478e-15, 0.17625, -0.02375)
+surface_material_override/0 = SubResource("StandardMaterial3D_ha6m7")
+
+[node name="arm-left" parent="character/root/torso" index="0" unique_id=844264409]
+transform = Transform3D(0.70710695, 0.70710695, 0, -0.70710695, 0.70710695, 0, 0, 0, 1, 0.3, 0.175, 0)
+surface_material_override/0 = SubResource("StandardMaterial3D_ha6m7")
+
+[node name="arm-right" parent="character/root/torso" index="1" unique_id=525956347]
+transform = Transform3D(0.70710695, -0.70710695, 0, 0.70710695, 0.70710695, 0, 0, 0, 1, -0.3, 0.1195, 0)
+surface_material_override/0 = SubResource("StandardMaterial3D_ha6m7")
+
+[node name="antenna" parent="character/root/torso" index="2" unique_id=1592746442]
+transform = Transform3D(1, 0, 0, 0, 0.999999, 0, 0, 0, 0.999999, 0, 0.6, 0)
+surface_material_override/0 = SubResource("StandardMaterial3D_ha6m7")
+
+[node name="AnimationPlayer" parent="." index="1" unique_id=19817863]
+deterministic = true
+playback_default_blend_time = 0.2
